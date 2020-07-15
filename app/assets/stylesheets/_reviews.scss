@@ -5,7 +5,7 @@
 .Top{
   width: 100%;
   height: 80px;
-  background-color: green;
+  // background-color: green;
   padding: 5px 200px;
   border-bottom: solid 1px rgb(241, 238, 238);
 }
@@ -22,7 +22,19 @@
 .Form_input{
   width: 1000px;
 }
-.Title{
+.User{
+  display: flex;
+}
+.User__Icon{
+  border-radius: 50%;
+  font-size: 7px;
+  line-height: 2em;
+  padding-top: 0.5em;
+  padding-left: 1.2em;
+  padding-right: 1.2em;
+  color: #fff;
+  background: rgb(230, 123, 230);
+  margin-right: 5px;
 }
 h1 {
   font-size: 50px;
@@ -42,6 +54,15 @@ h1 {
   color: #fff;
   font-size: 25px;
 }
+h2 {
+  margin-top: 250px;
+  position: relative
+}
+.Feature-Pic{
+  height: 340px;
+  width: 520px;
+  position: absolute;
+}
 .Right{
   background-color: red;
   width: 550px;
@@ -50,17 +71,19 @@ h1 {
 }
 .Body{
   padding: 0 200px;
-  display: flex;
   height: 600px;
+}
+.wrapper-1{
+  display: flex;
 }
 
 .Contents{
   width: 200px;
   padding-left: 30px;
-  background-color: indigo;
-  color: lightgray;
+  margin-top: 30px;
+  // background-color: indigo;
+  color: gray;
   font-size: 12px;
-  padding-top: 30px;
   border-right: solid 1px rgb(241, 238, 238);
 }
 .Ivent{ padding: 10px 0; cursor:pointer;}
@@ -80,14 +103,14 @@ h1 {
 .Conversion{ padding: 10px 0; cursor:pointer;}
 .PickUp{
   width: 600px;
-  background-color: lime;
+  // background-color: lime;
 }
 .PickUp__Heading{
   height: 50px;
   padding: 20px;
   font-size: 18px;
   font-weight: bold;
-  background-color: mintcream;
+  // background-color: mintcream;
 }
 .PickUp__ProjectBox{
   height: 150px;
@@ -96,9 +119,9 @@ h1 {
   display: flex;
   align-items: flex-start;
   border-bottom: solid 1px rgb(241, 238, 238);
-  background-color: navy;
+  // background-color: navy;
 }
-.PickUp__Picture{
+.PickUp-Pic{
   height: 130px;
   width: 130px;
   margin-right: 20px;
@@ -106,60 +129,72 @@ h1 {
 }
 .PickUp__Text__Letter{
   font-size: 11px;
-  color: lightgray;
+  color: gray;
   margin-top: 5px;
 }
 .PickUp__Text__Writer{
   font-size: 10px;
-  color: lightgray;
+  color: gray;
   margin-top: 15px;
 }
 .Runking{
   width: 250px;
-  background-color: mediumorchid;
+  height: 500px;
+  margin-top: 20px;
+  // background-color: mediumorchid;
   border: solid 2px rgb(241, 238, 238);
 }
 .Runking__Heading{
   height: 30px;
-  padding: 20px;
+  padding: 10px;
   font-size: 15px;
   font-weight: bold;
-  background-color: yellow;
+  // background-color: yellow;
 }
 .Runking__ProjectBox{
   height: 70px;
   margin: 5px;
   display: flex;
   align-items: flex-start;
-  background-color: lemonchiffon;
+  // background-color: lemonchiffon;
 }
-.Runking__Picture{
-  height: 60px;
-  width: 60px;
+.Runking-Pic{
+  height: 70px;
+  width: 70px;
   margin-right: 10px;
+  position: absolute;
   background-color: lightblue;
 }
+.Runking__num{
+  position: relative;
+  top: 0;
+  left: 0;
+  font-size: 12px;
+  width: 15px;
+  background-color: rgb(238, 163, 119);
+  color: #ffffff;
+}
 .Runking__Text__Heading{
+  margin-left: 60px;
   font-size: 12px;
   width: 150px;
   height: 60px;
-  background-color: lightslategray;
+  // background-color: lightslategray;
 }
 .Runking__Text__Writer{
+  margin-left: 60px;
   font-size: 8px;
-  color: lightgray;
+  color: gray;
 }
-.Recommend_Hedding{
-  height: 30px;
-  margin: 5px;
-  display: flex;
-  background-color: lightcoral;
+.Recommend_Heding{
+  margin-top: 30px;
+  // background-color: lightcoral;
   font-weight: bold;
   font-size: 15px;
 }
 .Recommend_Category{
   height: 100px;
-  background-color: lightgreen;
+  // background-color: lightgreen;
 }
 .btn{
   background-color: rgb(238, 238, 238);
@@ -168,4 +203,5 @@ h1 {
   font-size: 9px;
   color: rgb(165, 164, 164);
   border-radius: 5px;
+  border-style: none;
 }

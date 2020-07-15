@@ -1,0 +1,13 @@
+.Top
+  = form_with local: true do |f|
+    .Header
+      .Search
+        = f.text_field :name, class: 'Form_input', placeholder: 'キーワード（例：隈研吾）'
+        = f.submit class: 'Search', value: '検索'
+      .Title
+        %h1 archi log(仮)
+      .User
+        .User__Icon
+          S
+        .User__Name
+          中村慧睦
