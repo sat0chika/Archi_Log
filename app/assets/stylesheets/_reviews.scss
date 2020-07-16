@@ -36,11 +36,12 @@
   background: rgb(230, 123, 230);
   margin-right: 5px;
 }
-h1 {
+.title {
   font-size: 50px;
   color: orange;
   font-family: 'Ubuntu Mono', monospace;
   margin-bottom: 20px;
+  text-decoration: none;
 }
 .Latest{
   height: 340px;
@@ -49,14 +50,36 @@ h1 {
   justify-content: center;
 }
 .Left{
-  background-color: blue;
+  // background-color: blue;
   width: 550px;
   color: #fff;
-  font-size: 25px;
+}
+.Left__Writer{
+  color: #fff;
+  position: relative;
+  display: flex;
+  margin-top: 5px;
+}
+.Writer-Ico{
+  margin-top: 5px;
+  margin-left: 40px;
+  margin-right: 10px;
+  height: 15px;
+  width: 15px;
+}
+.Right__Writer{
+  color: #fff;
+  position: relative;
+  display: flex;
+  margin-top: 5px;
+  font-size: 15px;
+  // margin-left: 25px;
 }
 h2 {
   margin-top: 250px;
-  position: relative
+  margin-left: 20px;
+  position: relative;
+  font-size: 25px;
 }
 .Feature-Pic{
   height: 340px;
@@ -64,10 +87,10 @@ h2 {
   position: absolute;
 }
 .Right{
-  background-color: red;
+  // background-color: red;
   width: 550px;
   color: #fff;
-  font-size: 25px;;
+  font-size: 25px;
 }
 .Body{
   padding: 0 200px;
@@ -86,21 +109,21 @@ h2 {
   font-size: 12px;
   border-right: solid 1px rgb(241, 238, 238);
 }
-.Ivent{ padding: 10px 0; cursor:pointer;}
-.WhatDay{ padding: 10px 0; cursor:pointer;}
-.Feature{ padding: 10px 0; cursor:pointer;}
-.Serialization{ padding: 10px 0; cursor:pointer;}
-.NewArrival{ padding: 10px 0; cursor:pointer;}
-.NewArchitecture{ padding: 10px 0; cursor:pointer;}
-.Recommended{ padding: 10px 0; cursor:pointer;}
-.House{ padding: 10px 0; cursor:pointer;}
-.Library{ padding: 10px 0; cursor:pointer;}
-.Museum{ padding: 10px 0; cursor:pointer;}
-.Hotel{ padding: 10px 0; cursor:pointer;}
-.CityHall{ padding: 10px 0; cursor:pointer;}
-.Commarce{ padding: 10px 0; cursor:pointer;}
-.Renovation{ padding: 10px 0; cursor:pointer;}
-.Conversion{ padding: 10px 0; cursor:pointer;}
+.Ivent{ padding: 10px 0;}
+.WhatDay{ padding: 10px 0;}
+.Feature{ padding: 10px 0;}
+.Serialization{ padding: 10px 0;}
+.NewArrival{ padding: 10px 0;}
+.NewArchitecture{ padding: 10px 0;}
+.Recommended{ padding: 10px 0;}
+.House{ padding: 10px 0;}
+.Library{ padding: 10px 0;}
+.Museum{ padding: 10px 0;}
+.Hotel{ padding: 10px 0;}
+.CityHall{ padding: 10px 0;}
+.Commarce{ padding: 10px 0;}
+.Renovation{ padding: 10px 0;}
+.Conversion{ padding: 10px 0;}
 .PickUp{
   width: 600px;
   // background-color: lime;
@@ -204,4 +227,133 @@ h2 {
   color: rgb(165, 164, 164);
   border-radius: 5px;
   border-style: none;
+}
+
+.Profile{
+  height: 200px;
+  width: 250px;
+  position: relative;
+  padding: 14px;
+  margin-top: 30px;
+  // background-color: blue;
+  border: solid 2px rgb(241, 238, 238);
+  &__Icon{
+    height: 60px;
+    width: 60px;
+    margin-top: 50px;
+    position: absolute;
+    background-color: peru;
+  }
+  &__Account{
+    // height: 170px;
+    width: 130px;
+    margin-left: 70px;
+    font-weight: bold;
+    // background-color: plum;
+  }
+  &__Introdcution{
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 70px;
+    font-size: 12px;
+    color: gray;
+  }
+}
+.Profile-Pic{
+  height: 60px;
+  width: 60px;
+  margin-top: 50px;
+  position: absolute;
+  background-color: peru;
+}
+.Detail{
+  width: 750px;
+  margin-top: 30px;
+  margin-right: 20px;
+}
+.ConceptBox{
+  height: 300px;
+  background-color: rgb(252, 252, 252);
+  border: solid 1px rgb(241, 238, 238);;
+  &__Fabo{
+    height: 60px;
+    // background-color: grey;
+    position: relative;
+    border-bottom: solid 1px rgb(241, 238, 238);
+  }
+}
+.fas.fa-star{
+  margin-top: 20px;
+  margin-left: 600px;
+}
+.ConceptBox__Hedding{
+  display: flex;
+}
+.Concept-Pic{
+  height: 120px;
+  width: 170px;
+  margin-top: 30px;
+  margin-left: 30px;
+  background-color: greenyellow;
+}
+
+.ConceptBox__Title{
+  margin-top: 30px;
+  margin-left: 20px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.ConceptBox_Text{
+  font-size: 13px;
+  color: rgb(194, 194, 194);
+  width: 500px;
+  margin-top: 90px;
+  margin-left: 230px;
+  position: absolute;
+}
+.fab-btn{
+  border-style: none;
+  color: rgb(165, 164, 164);
+  border-radius: 5px;
+  width: 130px;
+  margin-left: 380px;
+}
+.Details{
+  height: 600px;
+  padding: 20px 40px 0;
+  // background-color: paleturquoise;
+}
+.Detail_Heading{
+  font-size: 25px;
+  font-weight: bolder;
+  padding: 20px, 30px, o;
+  // border-bottom: solid 2px grey;
+}
+.Detail_Border{
+  margin-top: 20px;
+  border-top: solid 4px rgb(241, 238, 238);
+}
+.Detail-Pic{
+  margin-top: 20px;
+  margin-left: 20px;
+  height: 330px;
+  width: 500px;
+  background-color: lightslategrey;
+}
+.Detail_Text{
+  margin-top: 20px;
+  width: 680px;
+}
+.Detail-Pic2{
+  margin-top: 20px;
+}
+.Detail_Text2{
+  margin-left: 330px;
+  font-size: 12px;
+  color: gray;
+}
+.wrapper-2{
+  display: flex;
+  padding-left: 200px;
 }

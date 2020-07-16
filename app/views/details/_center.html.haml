@@ -1,0 +1,30 @@
+.Detail
+  .ConceptBox
+    .ConceptBox__Fabo
+      .ConceptBox__star
+        = icon('fas', 'star')
+        ０　お気に入り
+    .ConceptBox__Hedding
+      .ConceptBox__Picture
+      = image_tag "/assets/1.jpg", alt: "image", class: 'Concept-Pic'
+      .ConceptBox__Title
+        【東京】新国立競技場がついに竣工！
+      .ConceptBox_Text
+        新国立競技場は、「杜のスタジアム」と題し、”木”を取り入れた、周辺環境と調和するスタジアム。木材と鉄骨のハイブリッド構造の屋根となっており、高さを約47.4mと低く設定することで、水平なラインを強調した、圧迫感の少ないデザインを採用している。細かく連ねられた木材は、47都道府県それぞれの地域で生まれた「杉」を使用している。木材はそれぞれの産地に向けた方角に並べられ、日本全国の一体感を象徴するデザインを想定。
+        .ConceptBox__Fab-btn
+          = form_with local: true do |f|
+            = f.submit '★お気に入りに追加', class: 'fab-btn'
+  .Details
+    .Detail_Heading
+      予算の問題や住民運動の果てに設計を手掛けたのは隈研吾建築都市設計事務所と大成建設のJV
+    .Detail_Border
+    .Detail_Picture
+    = image_tag "/assets/14.jpg", alt: "image", class: 'Detail-Pic'
+    .Detail_Text
+      隈研吾は、「高輪ゲートウェイ駅」や「新風館跡地」にできる新複合施設の建築も手掛け、過去には南青山「サニーヒルズ」などを設計した国内外でも活躍する建築家。
+      %br/
+      自身が10歳の時に、建築家・丹下健三の手掛けた以前の国立競技場を目にしたことが建築家を目指すきっかけとなったと話し、周辺地域にも学生時代から馴染みがあった。
+    .Detail_Picture
+    = image_tag "/assets/15.jpg", alt: "image", class: 'Detail-Pic2'
+    .Detail_Text2
+      バンクーバーに計画中の高層ビル
