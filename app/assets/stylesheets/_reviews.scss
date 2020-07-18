@@ -30,11 +30,18 @@
   font-size: 7px;
   line-height: 2em;
   padding-top: 0.5em;
-  padding-left: 1.2em;
-  padding-right: 1.2em;
+  padding-left: 1.0em;
+  padding-right: 1.0em;
   color: #fff;
   background: rgb(230, 123, 230);
   margin-right: 5px;
+}
+.User__Name{
+  font-size: 13px;
+}
+.User__Edit{
+  margin-left: 10px;
+  font-size: 13px;
 }
 .title {
   font-size: 50px;
