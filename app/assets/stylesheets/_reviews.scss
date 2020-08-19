@@ -107,10 +107,11 @@ h2 {
   display: flex;
 }
 
-.Contents{
+.content{
   width: 200px;
   padding-left: 30px;
   margin-top: 30px;
+  text-decoration: none;
   // background-color: indigo;
   color: gray;
   font-size: 12px;
@@ -135,13 +136,13 @@ h2 {
   width: 600px;
   // background-color: lime;
 }
-.PickUp__Heading{
-  height: 50px;
-  padding: 20px;
-  font-size: 18px;
-  font-weight: bold;
-  // background-color: mintcream;
-}
+// .PickUp__Heading{
+//   height: 50px;
+//   padding: 20px;
+//   font-size: 18px;
+//   font-weight: bold;
+//   background-color: mintcream;
+// }
 .PickUp__ProjectBox{
   height: 150px;
   width: 560px;
@@ -149,7 +150,10 @@ h2 {
   display: flex;
   align-items: flex-start;
   border-bottom: solid 1px rgb(241, 238, 238);
-  // background-color: navy;
+  a{
+  text-decoration: none;
+  color: #000000;
+  }
 }
 .PickUp-Pic{
   height: 130px;
@@ -159,8 +163,10 @@ h2 {
 }
 .PickUp__Text__Letter{
   font-size: 11px;
-  color: gray;
   margin-top: 5px;
+  a{
+  color: gray;
+  }
 }
 .PickUp__Text__Writer{
   font-size: 10px;

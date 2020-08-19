@@ -11,7 +11,8 @@
         @Koheta_jpg
   .Right
     .Right__Picture
-      = image_tag "/assets/2.jpg", alt: "image", class: 'Feature-Pic'
+      -# = image_tag "/assets/2.jpg", alt: "image", class: 'Feature-Pic'
+      = link_to image_tag("/assets/2.jpg", alt: "image", class: 'Feature-Pic'), details_path
     .Right__Heading
       %h2 【スペイン】本当に2026年に完成予定！？
     .Right__Writer
