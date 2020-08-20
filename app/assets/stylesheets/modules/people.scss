@@ -119,3 +119,17 @@
     font-size: 13px;
   }
 }
+
+.Section{
+  display: flex;
+  justify-content: center;
+  .UserInfo{
+  width: 720px;
+  height: 200px;
+  background-color: pink;
+  // background-color: #F8F8F8;
+  border: 2px solid #EEEEEE;
+  padding: 19px;
+  margin: 30px;
+  }
+}

@@ -1,5 +1,11 @@
 class PeopleController < ApplicationController
 
+  def show
+    # People = People.find(params[:id])
+    # @name = people.name
+    # @topics = people.topics
+  end
+
   def edit
   end
 

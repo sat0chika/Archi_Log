@@ -1,0 +1,40 @@
+%header
+= render "main/top"
+.Section
+  .UserInfo
+    
+    .UserInfo__icon
+    .UserInfo__name
+      .UserInfo__contents
+
+
+  .RightSide
+    = render "main/runking"
+
+
+
+
+-#       .Contents
+        -# - @topics.each do |topic|
+          -# .MyPage
+          -#   .MyPage__Top
+              投稿者
+              -# .SubName
+            -#     = link_to topic.people.name
+            -#   .SubItems
+            -#     - if people_signed_in? && current_user.id == topic.people_id
+            -#       .SubItems__edit
+            -#         = link_to '編集', edit_topic_path(topic.id), method: :get
+            -#       .SubItems__detail
+            -#         = link_to '詳細', topic_path(topic.id), method: :get
+            -#       .SubItems__delete
+            -#         = link_to '削除', topic_path(topic.id), method: :delete, data: {confirm: "本当に削除しますか?"}
+            
+            -# .Content
+            -#   .Content__Image
+            -#     = link_to topic_path(topic.id) do
+            -#       = image_tag "#{article.image}"
+            -#   .Content__Title
+            -#     = link_to topic.title , topic_path(topic.id), method: :get
+            -#   .Content__Description
+            -#     = link_to topic.description , topic_path(topic.id), method: :get
