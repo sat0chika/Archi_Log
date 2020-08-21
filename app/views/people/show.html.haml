@@ -1,11 +1,37 @@
 %header
 = render "main/top"
 .Section
-  .UserInfo
-    
-    .UserInfo__icon
-    .UserInfo__name
-      .UserInfo__contents
+  .Section_Box
+    .UserInfo
+      .UserInfo__icon
+        = @icon
+      .UserInfo__name
+        = @name
+        中村慧睦
+        .UserInfo__contents
+    .Posts
+      投稿一覧
+    .PickUp__ProjectBox
+      = link_to image_tag("/assets/4.jpg", alt: "image", class: 'PickUp-Pic'), topics_path
+      .PickUp__Text
+        = link_to topics_path class: "PickUp" do
+          【中国】アリババの未来型ホテルが開業。
+          %br/
+          どこでも「顔パス」で上機嫌。
+        .PickUp__Text__Letter
+          アリババグループが2年半に渡って温めてきた近未来方ホテルが
+          %br/
+          ついに開業した。本所在地の…
+        .PickUp__Text__Writer
+          中村慧睦
+        .SubItems
+          -# - if people_signed_in? && current_user.id == topic.people_id
+          .SubItems__edit
+            = link_to '編集'
+          .SubItems__detail
+            = link_to '詳細'
+          .SubItems__delete
+            = link_to '削除'
 
 
   .RightSide

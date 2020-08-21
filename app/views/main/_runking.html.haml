@@ -78,14 +78,24 @@
         Poten-Poten
   .Recommend_Heding
     おすすめカテゴリー
-  .Recommend_Category
+  .Recommend_list
     = form_with local: true do |f|
-      = f.submit '東京都(165)', class: 'btn'
-      = f.submit '伊東豊雄(24)', class: 'btn'
-      = f.submit 'コンペ(83)', class: 'btn'
-      = f.submit 'OMA(46)', class: 'btn'
-      = f.submit '渋谷(31)', class: 'btn'
-      = f.submit '蔦屋書店(7)', class: 'btn'
-      = f.submit 'NENDO(16)', class: 'btn'
-      = f.submit '中国(45)', class: 'btn'
-      = f.submit 'TDW(19)', class: 'btn'
+      .Recommend_btn
+        .btn
+          = link_to '東京都(165)', class: 'btn'
+        .btn
+          = link_to '伊東豊雄(24)', class: 'btn'
+        .btn
+          = link_to 'コンペ(83)', class: 'btn'
+        .btn
+          = link_to 'OMA(46)', class: 'btn'
+        .btn
+          = link_to '渋谷(31)', class: 'btn'
+        .btn
+          = link_to '蔦屋書店(7)', class: 'btn'
+        .btn
+          = link_to 'NENDO(16)', class: 'btn'
+        .btn
+          = link_to '中国(45)', class: 'btn'
+        .btn
+          = link_to 'TDW(19)', class: 'btn'

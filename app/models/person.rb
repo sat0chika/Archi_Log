@@ -5,4 +5,6 @@ class Person < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :name, presence: true, uniqueness: true
+  has_many :topics
+  has_many :likes, dependent: :destroy
 end

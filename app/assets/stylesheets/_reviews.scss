@@ -226,18 +226,31 @@ h2 {
   font-weight: bold;
   font-size: 15px;
 }
-.Recommend_Category{
-  height: 100px;
-  // background-color: lightgreen;
-}
-.btn{
-  background-color: rgb(238, 238, 238);
-  height: 20px;
-  width: 72px;
-  font-size: 9px;
-  color: rgb(165, 164, 164);
-  border-radius: 5px;
-  border-style: none;
+.Recommend_list{
+display: flex;
+flex-wrap: wrap;
+.Recommend_btn{
+  display: flex;
+  flex-wrap: wrap;
+    .btn{
+      display: block;
+      width: 72px;
+      height: 20px;
+      font-size: 9px;
+      border-radius: 5px;
+      border: 2px solid transparent;
+      cursor: pointer;
+      text-align: center;
+      background-color: rgb(238, 238, 238);
+      margin-right: 3px;
+      margin-top: 3px;
+    }
+    a{
+      text-decoration: none;
+      color: black;
+      color: rgb(165, 164, 164);
+    }
+  }
 }
 
 .Profile{
