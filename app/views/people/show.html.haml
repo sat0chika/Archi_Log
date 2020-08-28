@@ -1,16 +1,20 @@
 %header
-= render "main/top"
+= render "main/header"
 .Section
   .Section_Box
     .UserInfo
       .UserInfo__icon
+        S
         = @icon
       .UserInfo__name
         = @name
         中村慧睦
         .UserInfo__contents
     .Posts
-      投稿一覧
+      .PostsIndex
+        投稿一覧
+      .NewPosts
+        = link_to '新規投稿', new_topic_path
     .PickUp__ProjectBox
       = link_to image_tag("/assets/4.jpg", alt: "image", class: 'PickUp-Pic'), topics_path
       .PickUp__Text

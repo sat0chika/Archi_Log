@@ -11,8 +11,7 @@
         .User__Icon
           S
         .User__Name
-          -# = current_parson.name
-          中村慧睦
+        = link_to '中村慧睦', person_path(:id), class: "User__Name"
         .User__Edit
           設定
           -# = link_to edit_person_path do

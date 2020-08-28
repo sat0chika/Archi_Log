@@ -135,11 +135,16 @@
   .UserInfo__icon{
     width: 150px;
     height: 150px;
-    background-color: #CCC;
+    background-color: rgb(230, 123, 230);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 50%;
+    font-size: 80px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     }
   .UserInfo__name{
     font-size: 36px;
@@ -149,11 +154,24 @@
     }
   }
   .Posts{
-    width: 250px;
-    height: 50px;
-    background-color: #DDD;
-    font-size: 20px;
-    padding: 10px 80px;
+    display: flex;
+    .PostsIndex{
+      width: 250px;
+      height: 50px;
+      background-color: #DDD;
+      font-size: 20px;
+      padding: 10px 80px;
+    }
+    .NewPosts{
+      width: 250px;
+      height: 50px;
+      border: solid 1px #DDD;
+      font-size: 20px;
+      padding: 10px 80px;
+      a:hover {
+          color: #f1f1f1;
+        }
+    }
   }
 }
 

@@ -1,29 +1,26 @@
 %header
-= render('main/top')
+= render('main/header')
 .NewTopic
   .NewTopic__page
     新規投稿
-    
-  -# = render 'form'
   .NewTopic__form
     = form_for @topic do |f|
       .FormBox
-        .FormBox__label--normal
-          = f.label :タイトル
-        .FormBox__input--normal
-          = f.text_field :title
-        .FormBox__label--normal
-          = f.label :本文
-        -# = markdown(@topic.body).html_safe 
-        .FormBox__input--normal
-          = f.text_area :description, rows: 10
+        トップ画を選んでください
         .ImageLogo
           = f.label :image, class: 'ImageLogo__image' do
             = icon('far', 'image', class: 'ImageLogo__icon')
             = f.file_field :image, class: 'file'
+        .FormBox__label--normal
+          = f.label :見出し
+        .FormBox__input--normal
+          = f.text_field :title, placeholder: "【東京】新国立競技場がついに竣工！"
+        .FormBox__label--normal
+          = f.label :本文（マークダウン記法で入力してください）
+        .FormBox__input--normal
+          = f.text_area :description, rows: 10, placeholder: "新国立競技場は、「杜のスタジアム」と題し、”木”を取り入れた、周辺環境と調和するスタジアム。"
       .action
         = f.submit '投稿する'
       .return
-        = link_to '戻る', topics_path
-
--# = render "/pages/site_map"
+        = link_to '戻る', person_path(:id)
+        -# = link_to article.description , article_path(article.id), method: :get
