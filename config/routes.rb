@@ -4,6 +4,6 @@ Rails.application.routes.draw do
     # root to: 'people#edit'
 
 
-  resources :topics, only: [:index]
+  resources :topics, only: [:show, :index, :new, :create, :edit]
   resources :people, only: [:show, :edit, :update]
 end

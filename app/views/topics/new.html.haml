@@ -1,0 +1,29 @@
+%header
+= render('main/top')
+.NewTopic
+  .NewTopic__page
+    新規投稿
+    
+  -# = render 'form'
+  .NewTopic__form
+    = form_for @topic do |f|
+      .FormBox
+        .FormBox__label--normal
+          = f.label :タイトル
+        .FormBox__input--normal
+          = f.text_field :title
+        .FormBox__label--normal
+          = f.label :本文
+        -# = markdown(@topic.body).html_safe 
+        .FormBox__input--normal
+          = f.text_area :description, rows: 10
+        .ImageLogo
+          = f.label :image, class: 'ImageLogo__image' do
+            = icon('far', 'image', class: 'ImageLogo__icon')
+            = f.file_field :image, class: 'file'
+      .action
+        = f.submit '投稿する'
+      .return
+        = link_to '戻る', topics_path
+
+-# = render "/pages/site_map"

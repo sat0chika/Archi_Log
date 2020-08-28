@@ -1,0 +1,11 @@
+-# id="notice" notice
+
+
+%strong Title:
+= @topic.title
+
+%span
+  = markdown(@topic.description).html_safe
+
+= link_to 'Edit', edit_topic_path(@topic)
+= link_to 'Back', topics_path
