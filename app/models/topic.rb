@@ -4,6 +4,6 @@ class Topic < ApplicationRecord
   validates :description, presence: true
 
   belongs_to :person, optional: true
-  has_many :likes, dependent: :destroy
-
+  # has_many :likes, dependent: :destroy
+  mount_uploader :image, ImageUploader
 end

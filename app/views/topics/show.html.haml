@@ -1,11 +1,30 @@
--# id="notice" notice
+%header
+= render "main/header"
+
+.Topics
+  .TopicsBox
+    .TopicsBox__Fabo
+      .TopicsBox__star
+        = icon('fas', 'star')
+        ０　お気に入り
+    .TopicsBox__Hedding
+      .TopicsBox__Picture
+        = image_tag (@topic.image_url), class: 'Topics-Pic'
+      .TopicsBox__Title
+        = @topic.title
+      .TopicsBox_Text
+        .TopicsBox__Fab-btn
+          = form_with local: true do |f|
+            = f.submit '★お気に入りに追加', class: 'fab-btn'
+
+    .Text
+      .Text_Detail
+        %span
+        = markdown(@topic.description).html_safe
 
 
-%strong Title:
-= @topic.title
+    = link_to 'Edit', edit_topic_path(@topic.id), method: :get
+    = link_to 'Back', "/people/#{current_person.id}"
 
-%span
-  = markdown(@topic.description).html_safe
 
-= link_to 'Edit', edit_topic_path(@topic)
-= link_to 'Back', topics_path
+  = render "right"

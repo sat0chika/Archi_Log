@@ -4,7 +4,7 @@
   .NewTopic__page
     新規投稿
   .NewTopic__form
-    = form_for @topic do |f|
+    = form_with model: @topic do |f|
       .FormBox
         トップ画を選んでください
         .ImageLogo

@@ -28,10 +28,10 @@
 .User__Icon{
   border-radius: 50%;
   font-size: 7px;
-  line-height: 2em;
+  line-height: 2.5em;
   padding-top: 0.5em;
-  padding-left: 1.0em;
-  padding-right: 1.0em;
+  padding-left: 1.2em;
+  padding-right: 1.2em;
   color: #fff;
   background: rgb(230, 123, 230);
   margin-right: 5px;
@@ -42,6 +42,7 @@
 .User__Edit{
   margin-left: 10px;
   font-size: 13px;
+  margin-top: 3px;
 }
 .title {
   font-size: 50px;
@@ -55,6 +56,12 @@
   padding: 0 200px;
   display: flex;
   justify-content: center;
+  h2 {
+    margin-top: 250px;
+    margin-left: 20px;
+    position: relative;
+    font-size: 25px;
+  }
 }
 .Left{
   // background-color: blue;
@@ -82,12 +89,7 @@
   font-size: 15px;
   // margin-left: 25px;
 }
-h2 {
-  margin-top: 250px;
-  margin-left: 20px;
-  position: relative;
-  font-size: 25px;
-}
+
 .Feature-Pic{
   height: 340px;
   width: 520px;
@@ -251,7 +253,6 @@ flex-wrap: wrap;
   width: 250px;
   position: relative;
   padding: 14px;
-  margin-top: 30px;
   // background-color: blue;
   border: solid 2px rgb(241, 238, 238);
   &__Icon{

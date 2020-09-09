@@ -1,12 +1,13 @@
 class PeopleController < ApplicationController
 
   def show
-    # People = People.find(params[:id])
-    # @name = people.name
-    # @topics = people.topics
+    person = Person.find(current_person.id)
+    @name = person.name
+    @topics = person.topics
   end
 
   def edit
+    @person = Person.find(params[:id])
   end
 
   def update
@@ -20,6 +21,7 @@ class PeopleController < ApplicationController
   private
 
   def person_params
-    params.require(:user).permit(:name, :email)
+    params.require(:person).permit(:name, :email, :password, :password_confirmation, :introduce, :image)
   end
+
 end
