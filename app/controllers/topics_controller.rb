@@ -10,11 +10,28 @@ class TopicsController < ApplicationController
   end
 
   def edit
+    @topic = Topic.find(params[:id])
+    # unless @topic.user_id == current_user.id
+    #   redirect_to root_path
+    # end
+  end
+
+  def update
+    @topic = Topic.update(topic_params)
+    if
+      @topic.update(topic_params)
+      flash[:notice] = "記事が更新されました"
+      redirect_to topic_path(@topic)
+    else
+      flash[:notice] = "記事の更新ができませんでした"
+      render 'edit'
+    end
   end
 
   def create
     @topic = Topic.create(topic_params)
-    if @topic.save
+    if
+      @topic.save
       flash[:notice] = "記事が投稿されました"
       redirect_to topic_path(@topic)
     else

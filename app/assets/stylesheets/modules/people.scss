@@ -162,18 +162,20 @@
       font-size: 20px;
       padding: 10px 80px;
     }
-    .NewPosts{
+    a{
+      border: solid 1px #DDD;
       width: 250px;
       height: 50px;
-      border: solid 1px #DDD;
       font-size: 20px;
       padding: 10px 80px;
-      a:hover {
-          color: #f1f1f1;
-        }
+    }
+    a:hover {
+      color: #f1f1f1;
     }
   }
 }
+
+
 
 .SubItems{
   display: flex;

@@ -1,70 +1,16 @@
 .PickUp
   .PickUp__Heading
     2020年07月19日のピックアップ
-  .PickUp__ProjectBox
-    = link_to image_tag("/assets/3.jpg", alt: "image", class: 'PickUp-Pic'), topics_path
-    .PickUp__Text
-      = link_to topics_path class: "PickUp" do
-        【渋谷】渋谷スクランブルスクエア
-        %br/
-        渋谷駅に直結した複合施設型超高層ビル
-      .PickUp__Text__Letter
-        2014年から工事が続いていた渋谷駅直結の超高層ビルの第1期
-        %br/
-        工事がついに竣工した。設計には…
-      .PickUp__Text__Writer
-        Archi Log
-  .PickUp__ProjectBox
-    = link_to image_tag("/assets/4.jpg", alt: "image", class: 'PickUp-Pic'), topics_path
-    .PickUp__Text
-      = link_to topics_path class: "PickUp" do
-        【中国】アリババの未来型ホテルが開業。
-        %br/
-        どこでも「顔パス」で上機嫌。
-      .PickUp__Text__Letter
-        アリババグループが2年半に渡って温めてきた近未来方ホテルが
-        %br/
-        ついに開業した。本所在地の…
-      .PickUp__Text__Writer
-        中村慧睦
-  .PickUp__ProjectBox
-    = link_to image_tag("/assets/5.jpg", alt: "image", class: 'PickUp-Pic'), topics_path
-    .PickUp__Text
-      = link_to topics_path class: "PickUp" do
-        【新豊洲】2020年日本建築学会賞作品賞
-        %br/
-        『道の駅 ましこ』MOUNT FUJI ARCHITECTS STUDIO
-      .PickUp__Text__Letter
-        MOUNT FUJI ARCHITECTS STUDIOが2020年建築学会賞作品賞
-        %br/
-        を受賞した。道の駅という…
-      .PickUp__Text__Writer
-        4時は夢中
-  .PickUp__ProjectBox
-    = link_to image_tag("/assets/6.jpg", alt: "image", class: 'PickUp-Pic'), topics_path
-    .PickUp__Text
-      = link_to topics_path class: "PickUp" do
-        【渋谷】渋谷パルコがオープン。設計は竹中工務店、
-        %br/
-        空中階の設計には藤本壮介建築設計事務所が担当。
-      .PickUp__Text__Letter
-        再開発が進んでいる渋谷に新たな商業施設が新規
-        %br/
-        オープンした。…
-      .PickUp__Text__Writer
-        塩大地
+    %script 
 
-  .Contents
-    -# - @topics.each do |topic|
-    .murata
-      .murata__post
-      投稿者
-      -# = link_to topic.user.name, user_path(topic.user.id), method: :get
-      .Content
-        .Content__Image
-          -# = link_to topic_path(topic.id) do
-            -# = image_tag "#{topic.image}"
-        .Content__Title
-          -# = link_to topic.title , topic_path(topic.id), method: :get
-        .Content__Description
-          -# = link_to topic.description , topic_path(topic.id), method: :get
+  - @topics.each do |topic|
+    .PickUp__ProjectBox
+      = link_to topic_path(topic.id) do
+        = image_tag topic.image.url, class: "PickUp-Pic"
+      .PickUp__Text
+        = link_to topic_path(topic.id), class: "PickUp" do
+          = topic.title
+        .PickUp__Text__Letter
+          = topic.description
+        .PickUp__Text__Writer
+          = topic.person.name
