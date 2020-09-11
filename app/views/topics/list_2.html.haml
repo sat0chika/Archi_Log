@@ -1,0 +1,58 @@
+%header
+= render "main/header"
+.Article
+  .Detail
+    .ConceptBox
+      .ConceptBox__Fabo
+        .ConceptBox__star
+          = icon('fas', 'star')
+          ０　お気に入り
+      .ConceptBox__Hedding
+        .ConceptBox__Picture
+        = image_tag "/assets/2.jpg", alt: "image", class: 'Concept-Pic'
+        .ConceptBox__Title
+          【スペイン】本当に2026年に完成予定！？
+        .ConceptBox_Text
+          完成までには300年以上を要すると言われていたスペイン随一の絶景スポット「サグラダ・ファミリア」。そんなサグラダ・ファミリアが、驚異的な工期短縮を見込めているのは一体なぜなのか、2026年完成予定の世界遺産の謎に迫ります。
+          .TopicsBox__Fab-btn
+            = link_to "#", class: "fab-btn" do
+              ★お気に入りに追加
+
+    .Details
+      .Detail_Heading
+        驚異的な工期短縮はなぜ？
+      .Detail_Border
+      %br/
+      .Detail_Text
+        　着工から100年以上が経過しても今なお建設途中という、珍しい世界遺産「サグラダ・ファミリア」。
+        %br/
+        2005年にユネスコの世界遺産に登録されましたが、当然その当時サグラダ・ファミリアはまだまだ未完成。かろうじて完成している建物のみという、部分的な世界遺産登録は世界でも異例と話題になりました。
+        %br/
+        %br/
+      .Detail_Picture
+      = image_tag "/assets/17.jpg", alt: "image", class: 'List-Pic'
+      .Detail_Text
+      　ガウディ亡き後弟子たちがこしらえた数々の資料もスペイン内戦で焼失してしまうというアクシデントに見舞われ、常に手探り状態で建設を進めていくしかなかったようです。
+      %br/
+      %br/
+      　みなさんの中には、自分が生きている間にサグラダ・ファミリアの完成を見ることはないのだろうなぁと、漠然と思っていた人も多いかもしれませんね。
+      %br/
+      %br/
+
+      .Detail_Heading
+        関連するタグ
+      .Detail_Border
+      .Recommend_list
+        = form_with local: true do |f|
+          .Recommend_btn
+            .btn
+              = link_to 'スペイン', class: 'btn'
+            .btn
+              = link_to 'サグラダ', class: 'btn'
+            .btn
+              = link_to 'ファミリア', class: 'btn'
+            .btn
+              = link_to 'ガウディ', class: 'btn'
+
+  .RightSide
+    = render "right"

@@ -1,0 +1,58 @@
+%header
+= render "main/header"
+.Article
+  .Detail
+    .ConceptBox
+      .ConceptBox__Fabo
+        .ConceptBox__star
+          = icon('fas', 'star')
+          ０　お気に入り
+      .ConceptBox__Hedding
+        .ConceptBox__Picture
+        = image_tag "/assets/12.jpg", alt: "image", class: 'Concept-Pic'
+        .ConceptBox__Title
+          100者の応募を制したのはパーシモンヒルズ・アーキテクツ
+        .ConceptBox_Text
+          既存の民俗資料館（右手）と新しい公民館（中央上）、体育館（右下）によって囲まれた広場をつくり、町の顔とする。
+          .TopicsBox__Fab-btn
+            = link_to "#", class: "fab-btn" do
+              ★お気に入りに追加
+
+    .Details
+      .Detail_Heading
+        岩手県住田町の公民館プロポ
+      .Detail_Border
+      %br/
+      .Detail_Text
+        　岩手県住田町は、上有住（かみありす）地区公民館の設計者を選定する公募型プロポーザルで、最優秀賞にPERSIMMON HILLS architects（パーシモンヒルズ・アーキテクツ、川崎市）を選定した。優秀賞は喜多裕建築事務所（東京・文京）、福山弘構造デザイン（東京・港）、イー・エー・ユー（東京・文京）の3社による設計共同体だった。
+        %br/
+        %br/
+        　パーシモンヒルズ・アーキテクツは、1986年生まれの柿木佑介氏と85年生まれの廣岡周平氏が、2016年に設立した。ともに関西大学工学部建築学科の出身（廣岡氏はその後、横浜国立大学大学院Y-GSA修了）。柿木氏はマウントフジアーキテクツスタジオ（東京・渋谷）、廣岡氏はSUEP.（スープ、東京・世田谷）と大成建設をそれぞれ経て、事務所を共同で立ち上げた。
+        %br/
+        %br/
+        　プロポーザルには、120者から参加表明があり、100者から技術提案資料が提出された。9月13日に審査委員会による第1次審査が行われ、第2次審査対象者として、6者を選んだ。9月27日に公開プレゼンテーションと第2次審査会を実施し、提案課題である次の5項目についての考え方や実施方針などを評価のうえ、最優秀賞と優秀賞を選定した。
+        %br/
+        %br/
+        （1）既存の民俗資料館との連続性、（2）建物の配置および外構計画、（3）地域産業の振興、（4）持続可能性の高い施設、（5）防災の要となる安全・安心な施設――。
+        %br/
+      .Detail_Picture
+      = image_tag "/assets/24.jpg", alt: "image", class: 'Detail-Pic2'
+      %br/
+      %br/
+      .Detail_Heading
+        関連するタグ
+      .Detail_Border
+      .Recommend_list
+        = form_with local: true do |f|
+          .Recommend_btn
+            .btn
+              = link_to 'パーヒル', class: 'btn'
+            .btn
+              = link_to '岩手県', class: 'btn'
+            .btn
+              = link_to 'コンペ', class: 'btn'
+            .btn
+              = link_to '公民館', class: 'btn'
+
+  .RightSide
+    = render "right"

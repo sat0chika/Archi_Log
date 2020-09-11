@@ -3,11 +3,17 @@ class PeopleController < ApplicationController
   def show
     person = Person.find(current_person.id)
     @name = person.name
-    @topics = person.topics
+    @topics = person.topics.order("created_at DESC").limit(5)
+  end
+
+  def fab
+    person = Person.find(current_person.id)
+    @name = person.name
+    @topics = person.topics.order("created_at DESC").limit(5)
   end
 
   def edit
-    @person = Person.find(params[:id])
+    # @person = Person.find(params[:id])
   end
 
   def update

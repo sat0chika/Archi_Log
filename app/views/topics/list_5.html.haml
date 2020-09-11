@@ -1,0 +1,55 @@
+%header
+= render "main/header"
+.Article
+  .Detail
+    .ConceptBox
+      .ConceptBox__Fabo
+        .ConceptBox__star
+          = icon('fas', 'star')
+          ０　お気に入り
+      .ConceptBox__Hedding
+        .ConceptBox__Picture
+        = image_tag "/assets/10.jpg", alt: "image", class: 'Concept-Pic'
+        .ConceptBox__Title
+          宮川清志 / SESNによる、美容クリニック「Men’s Clara」
+        .ConceptBox_Text
+          宮川清志 / SESNが設計した、東京・港区南青山の、美容クリニック「Men’s Clara」です。
+          .TopicsBox__Fab-btn
+            = link_to "#", class: "fab-btn" do
+              ★お気に入りに追加
+
+    .Details
+      .Detail_Border
+      %br/
+      .Detail_Picture
+        = image_tag "/assets/21.jpg", alt: "image", class: 'List-Pic'
+      .Detail_Text
+        港区南青山にある美容クリニック、Men’s Claraのクリニックデザイン。
+        %br/
+        %br/
+      .Detail_Text
+        3階建ての建築の特色を生かし、CASA、架空の邸宅というコンセプトをたて、ストーリー性のある体感ができる空間としています。
+        %br/
+        %br/
+      .Detail_Text
+        B１Fでは建具や面をスケールアウトさせ、1Fは部屋や壁ではなく柱を作り、2Fは扉や動線ではなく窓や街路を作り、主体をすり替えながら強調する事で、記憶の中の感覚知を行き来する事で架空の邸宅、CASAを架空性を保ったまま表現しています。
+        %br/
+        %br/
+
+      .Detail_Heading
+        関連するタグ
+      .Detail_Border
+      .Recommend_list
+        = form_with local: true do |f|
+          .Recommend_btn
+            .btn
+              = link_to '東京都', class: 'btn'
+            .btn
+              = link_to '南青山', class: 'btn'
+            .btn
+              = link_to '宮川清志', class: 'btn'
+            .btn
+              = link_to 'SESN', class: 'btn'
+
+  .RightSide
+    = render "right"

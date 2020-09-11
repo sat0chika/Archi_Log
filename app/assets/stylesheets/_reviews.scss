@@ -5,9 +5,15 @@
 .Top{
   width: 100%;
   height: 80px;
-  // background-color: green;
   padding: 5px 200px;
   border-bottom: solid 1px rgb(241, 238, 238);
+}
+
+.Under{
+  text-align: center;
+  background-color:#808080;
+  height: 100px;
+  padding-top: 25px;
 }
 .Header{
   display: flex;
@@ -51,6 +57,13 @@
   margin-bottom: 20px;
   text-decoration: none;
 }
+.Subtitle {
+  font-size: 30px;
+  color: #fff;
+  font-family: 'Ubuntu Mono', monospace;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
 .Latest{
   height: 340px;
   padding: 0 200px;
@@ -64,7 +77,6 @@
   }
 }
 .Left{
-  // background-color: blue;
   width: 550px;
   color: #fff;
 }
@@ -87,7 +99,6 @@
   display: flex;
   margin-top: 5px;
   font-size: 15px;
-  // margin-left: 25px;
 }
 
 .Feature-Pic{
@@ -96,7 +107,6 @@
   position: absolute;
 }
 .Right{
-  // background-color: red;
   width: 550px;
   color: #fff;
   font-size: 25px;
@@ -114,7 +124,6 @@
   padding-left: 30px;
   margin-top: 30px;
   text-decoration: none;
-  // background-color: indigo;
   color: gray;
   font-size: 12px;
   border-right: solid 1px rgb(241, 238, 238);
@@ -153,9 +162,9 @@
 }
 .PickUp-Pic{
   height: 130px;
-  width: 130px;
   margin-right: 20px;
   background-color: olive;
+  object-fit: cover;
 }
 .PickUp__Text__Letter{
   font-size: 11px;
@@ -171,7 +180,6 @@
   width: 250px;
   height: 500px;
   margin-top: 20px;
-  // background-color: mediumorchid;
   border: solid 2px rgb(241, 238, 238);
 }
 .Runking__Heading{
@@ -179,21 +187,20 @@
   padding: 10px;
   font-size: 15px;
   font-weight: bold;
-  // background-color: yellow;
 }
 .Runking__ProjectBox{
   height: 70px;
   margin: 5px;
   display: flex;
   align-items: flex-start;
-  // background-color: lemonchiffon;
 }
-.Runking-Pic{
+.Recommended-Pic{
   height: 70px;
   width: 70px;
   margin-right: 10px;
   position: absolute;
   background-color: lightblue;
+  object-fit: cover;
 }
 .Runking__num{
   position: relative;
@@ -209,7 +216,8 @@
   font-size: 12px;
   width: 150px;
   height: 60px;
-  // background-color: lightslategray;
+  a{font-weight: lighter;
+    color: black}
 }
 .Runking__Text__Writer{
   margin-left: 60px;
@@ -218,7 +226,6 @@
 }
 .Recommend_Heding{
   margin-top: 30px;
-  // background-color: lightcoral;
   font-weight: bold;
   font-size: 15px;
 }
@@ -226,6 +233,7 @@
 display: flex;
 flex-wrap: wrap;
 .Recommend_btn{
+  padding-top: 15px;
   display: flex;
   flex-wrap: wrap;
     .btn{
@@ -254,7 +262,6 @@ flex-wrap: wrap;
   width: 250px;
   position: relative;
   padding: 14px;
-  // background-color: blue;
   border: solid 2px rgb(241, 238, 238);
   &__Icon{
     height: 60px;
@@ -268,7 +275,6 @@ flex-wrap: wrap;
     width: 130px;
     margin-left: 70px;
     font-weight: bold;
-    // background-color: plum;
   }
   &__Introdcution{
     position: absolute;
@@ -285,18 +291,13 @@ flex-wrap: wrap;
   position: absolute;
   background-color: peru;
 }
-.Detail{
-  width: 750px;
-  margin-top: 30px;
-  margin-right: 20px;
-}
+
 .ConceptBox{
   height: 300px;
   background-color: rgb(252, 252, 252);
   border: solid 1px rgb(241, 238, 238);;
   &__Fabo{
     height: 60px;
-    // background-color: grey;
     position: relative;
     border-bottom: solid 1px rgb(241, 238, 238);
   }
@@ -313,7 +314,6 @@ flex-wrap: wrap;
   width: 170px;
   margin-top: 30px;
   margin-left: 30px;
-  background-color: greenyellow;
 }
 
 .ConceptBox__Title{
@@ -327,52 +327,23 @@ flex-wrap: wrap;
   font-size: 13px;
   color: rgb(194, 194, 194);
   width: 500px;
-  margin-top: 90px;
+  margin-top: 120px;
   margin-left: 230px;
   position: absolute;
 }
+.TopicsBox__Fab-btn{
+  margin-top: 10px;
+}
 .fab-btn{
+  background-color: #e6e6e6;
   border-style: none;
   color: rgb(165, 164, 164);
   border-radius: 5px;
   width: 130px;
-  margin-left: 380px;
+  margin-left: 370px;
+  padding: 5px;
 }
 .Details{
   height: 600px;
   padding: 20px 40px 0;
-  // background-color: paleturquoise;
-}
-.Detail_Heading{
-  font-size: 25px;
-  font-weight: bolder;
-  padding: 20px, 30px, o;
-  // border-bottom: solid 2px grey;
-}
-.Detail_Border{
-  margin-top: 20px;
-  border-top: solid 4px rgb(241, 238, 238);
-}
-.Detail-Pic{
-  margin-top: 20px;
-  margin-left: 20px;
-  height: 330px;
-  width: 500px;
-  background-color: lightslategrey;
-}
-.Detail_Text{
-  margin-top: 20px;
-  width: 680px;
-}
-.Detail-Pic2{
-  margin-top: 20px;
-}
-.Detail_Text2{
-  margin-left: 330px;
-  font-size: 12px;
-  color: gray;
-}
-.wrapper-2{
-  display: flex;
-  padding-left: 200px;
 }

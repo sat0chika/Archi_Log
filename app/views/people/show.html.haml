@@ -11,9 +11,12 @@
         .UserInfo__contents
     .Posts
       .PostsIndex
+      = link_to "/people/#{current_person.id}", class: "post-index" do
         投稿一覧
       = link_to new_topic_path do
         新規投稿
+      = link_to fab_people_path, class: "fab-index" do
+        お気に入り
     - @topics.each do |topic|
       .PickUp__ProjectBox
         = link_to topic_path(topic.id) do
@@ -34,4 +37,4 @@
 
 
   .RightSide
-    = render "main/runking"
+    = render "main/recommended"

@@ -1,9 +1,16 @@
+.Top
+  = form_with local: true do |f|
+    .Header
+      .Title
+        = link_to root_path, class: "title" do
+          %h1 archi log(仮)
+
 .AccountPage
   .AccountPage__title
     %h2 Edit Account
     %h5 アカウントの編集
-    = link_to "ログアウト", '#', class: 'Button'
-    = link_to "トップページに戻る", :back, class: 'Button'
+    = link_to "ログアウト", destroy_person_session_path, method: :delete, class: 'Button'
+    = link_to "トップページに戻る", root_path, class: 'Button'
   .AccountPage__form
     = form_for(current_person) do |f|
       .FormField

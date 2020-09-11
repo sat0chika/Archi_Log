@@ -13,5 +13,5 @@
         .User__Name
         = link_to current_person.name, "/people/#{current_person.id}"
         .User__Edit
+        = link_to edit_person_path(current_person), class: "icons__setting" do
           設定
-        -# = link_to edit_person_path do

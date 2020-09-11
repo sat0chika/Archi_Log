@@ -1,0 +1,56 @@
+%header
+= render "main/header"
+.Article
+  .Detail
+    .ConceptBox
+      .ConceptBox__Fabo
+        .ConceptBox__star
+          = icon('fas', 'star')
+          ０　お気に入り
+      .ConceptBox__Hedding
+        .ConceptBox__Picture
+        = image_tag "/assets/8.jpg", alt: "image", class: 'Concept-Pic'
+        .ConceptBox__Title
+          台湾・新竹市の図書館コンペ、平田晃久チームが「知の峡谷」で最優秀に
+        .ConceptBox_Text
+          メインストリートからの見下ろし。道に対して大きく開いた部分がエントランス。街の文化ゾーンをつなぐグリーンベルトは反対側の道路へと続いている。
+          .TopicsBox__Fab-btn
+            = link_to "#", class: "fab-btn" do
+              ★お気に入りに追加
+
+    .Details
+      .Detail_Border
+      %br/
+      .Detail_Text
+        　台湾・新竹市の図書館設計コンペで、平田晃久建築設計事務所（東京・港）とシィーエン・クオ・アーキテクト・アンド・アソシエーツ（台湾・台北市）の2社によるJV（共同企業体）の案が最優秀に選ばれた。
+        %br/
+        　新竹市図書館の設計コンセプトは「知の峡谷（Knowledge Canyon）」。街の文化ゾーンをグリーンベルトでつなぐという都市計画を踏襲して、グリーンベルトの軸を強化する知の峡谷を提案した。
+        
+      = image_tag "/assets/18.jpg", alt: "image", class: 'List-Pic'
+      .Detail_Text
+      　2枚の壁を立て、その間に、峡谷のようなリーディングルームをつくる。様々な年齢層や民族、志向の異なる人々が1つに集まるリビングルームのような場所にする。本を読むためだけの図書館を「小さな図書館（Small Library）」とするなら、この図書館は本に触発された様々なコミュニケーションの場が融合する「大きな図書館（Big Library）」を目指している。
+      %br/
+      %br/
+      = image_tag "/assets/19.jpg", alt: "image", class: 'List-Pic'
+      .Detail_Text2
+        書架が一望できる「峡谷」の空間
+        %br/
+        %br/
+
+      .Detail_Heading
+        関連するタグ
+      .Detail_Border
+      .Recommend_list
+        = form_with local: true do |f|
+          .Recommend_btn
+            .btn
+              = link_to '平田晃久', class: 'btn'
+            .btn
+              = link_to '台湾', class: 'btn'
+            .btn
+              = link_to 'コンペ', class: 'btn'
+            .btn
+              = link_to '図書館', class: 'btn'
+
+  .RightSide
+    = render "right"

@@ -6,7 +6,8 @@
     .TopicsBox__Fabo
       .TopicsBox__star
         = icon('fas', 'star')
-        ０　お気に入り
+        = @likes_count
+        お気に入り
     .TopicsBox__Hedding
       .TopicsBox__Picture
         = image_tag (@topic.image_url), class: 'Topics-Pic'
@@ -14,8 +15,24 @@
         = @topic.title
       .TopicsBox_Text
         .TopicsBox__Fab-btn
-          = form_with local: true do |f|
-            = f.submit '★お気に入りに追加', class: 'fab-btn'
+        - if current_person.already_liked?(@topic)
+          .TopicsBox__Fab-btn
+            = link_to "いいねを取り消す", topic_likes_path(@topic), method: :delete, class: 'fab-btn'
+        - else
+          .TopicsBox__Fab-btn
+            = link_to "★お気に入りに追加", topic_likes_path(@topic), method: :post, class: 'fab-btn'
+          -# = form_with local: true do |f|
+            -# = f.submit '★お気に入りに追加', class: 'fab-btn'
+
+
+        -# - if person_signed_in? && topic.liked_by?(current_person)
+        -#   = link_to topic_likes_path(topic.id),  method: :delete, class: "like-btn-unlike" , remote: true do
+        -#     %i.fas.fa-star
+        -#     = @likes_count
+
+        -# %div{:id => "fab-btn#{@topic.id}"}
+        -# = render partial: "likes/like", locals: { topic: @topic }
+
 
     .Text
       .Text_Detail
@@ -23,8 +40,8 @@
         = markdown(@topic.description).html_safe
 
 
-    = link_to 'Edit', edit_topic_path(@topic.id), method: :get
-    = link_to 'Back', "/people/#{current_person.id}"
+    -# = link_to 'Edit', edit_topic_path(@topic.id), method: :get
+    -# = link_to 'Back', :back
 
 
   = render "right"

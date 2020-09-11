@@ -1,0 +1,56 @@
+%header
+= render "main/header"
+.Article
+  .Detail
+    .ConceptBox
+      .ConceptBox__Fabo
+        .ConceptBox__star
+          = icon('fas', 'star')
+          ０　お気に入り
+      .ConceptBox__Hedding
+        .ConceptBox__Picture
+        = image_tag "/assets/9.jpg", alt: "image", class: 'Concept-Pic'
+        .ConceptBox__Title
+          在来軸組みのカワグチテイJV案に、徳島県「awaもくよんプロジェクト」
+        .ConceptBox_Text
+          周辺への圧迫感を抑えるように2棟に分け、建物を敷地中央にコンパクトにまとめて、敷地内に分節されたオープンスペースをつくる。中庭に緩やかな掘り込みのスロープを設け、東西通り抜けの通路とする。
+          .TopicsBox__Fab-btn
+            = link_to "#", class: "fab-btn" do
+              ★お気に入りに追加
+
+    .Details
+      .Detail_Border
+      %br/
+      .Detail_Text
+        　徳島県は、県営住宅の整備事業「awaもくよんプロジェクト」の設計コンペで、最優秀作品に内野設計（徳島市）と島津臣志建築設計事務所（徳島県佐那河内村）、カワグチテイ建築計画（東京・杉並）の3社JV（共同企業体）による提案「軸組もくよんが紡ぐ、重なり合う営みと風景」を選んだ。優秀作品はビーツーエーアーキテクツ（東京・千代田）と松村建築計画研究所（徳島県鳴門市）、KAP（東京・千代田）の3社JVによる「積層木板の暮らし～これからの徳島をつくる県営住宅～」だった。
+        %br/
+        %br/
+      .Detail_Text
+      　「awaもくよんプロジェクト」は、県営住宅の建て替えと周辺空き地を活用した施設整備を対象とする事業だ。コンペでは、全国初となる4階建てで木造現しによる準耐火構造を設計条件として求めた。4階建ての木造現しは、2019年6月施行の改正建築基準法で可能になった。Library）」とするなら、この図書館は本に触発された様々なコミュニケーションの場が融合する「大きな図書館（Big Library）」を目指している。
+      %br/
+      %br/
+      = image_tag "/assets/20.jpg", alt: "image", class: 'List-Pic'
+      .Detail_Text2
+        切妻屋根で木質化された北東側イメージ
+        %br/
+        %br/
+
+      .Detail_Heading
+        関連するタグ
+      .Detail_Border
+      .Recommend_list
+        = form_with local: true do |f|
+          .Recommend_btn
+            .btn
+              = link_to '徳島県', class: 'btn'
+            .btn
+              = link_to '島津臣志', class: 'btn'
+            .btn
+              = link_to '内野設計', class: 'btn'
+            .btn
+              = link_to 'カワグチテイ', class: 'btn'
+            .btn
+              = link_to 'コンペ', class: 'btn'
+
+  .RightSide
+    = render "right"

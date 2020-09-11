@@ -1,0 +1,61 @@
+%header
+= render "main/header"
+.Article
+  .Detail
+    .ConceptBox
+      .ConceptBox__Fabo
+        .ConceptBox__star
+          = icon('fas', 'star')
+          ０　お気に入り
+      .ConceptBox__Hedding
+        .ConceptBox__Picture
+        = image_tag "/assets/11.jpg", alt: "image", class: 'Concept-Pic'
+        .ConceptBox__Title
+          ザハ事務所など抑えて日建設計が当選、ロシア最大手銀行のTODコンペ
+        .ConceptBox_Text
+          中央に見える緩く弧を描いた建物が「ズベルバンク・シティー」。手前にモスクワ川が流れる。間口最大30mの細長い敷地となっている。
+          .TopicsBox__Fab-btn
+            = link_to "#", class: "fab-btn" do
+              ★お気に入りに追加
+
+    .Details
+      .Detail_Border
+      %br/
+      .Detail_Text
+        　ロシア・モスクワに建設するホールを核としたTOD（公共交通指向型開発）の国際指名設計コンペで、日建設計の案が最優秀に選ばれた。
+        %br/
+        %br/
+      .Detail_Text
+      　この設計コンペはロシア最大手の銀行、ズベルバンク（ロシア連邦貯蓄銀行）が主催。2019年8月20日に行われたプレゼンテーションには日建設計のほか、ザハ・ハディド・アーキテクツ（英国）やコープ・ヒンメルブラウ（オーストリア）、アルケア・アッソチャーティ（イタリア）の計4者が参加し、日建設計が当選した。
+      %br/
+      %br/
+      = image_tag "/assets/22.jpg", alt: "image", class: 'List-Pic'
+      .Detail_Text2
+        長手方向の断面パース
+      %br/
+      %br/
+      .Detail_Text
+      　モスクワでのプレゼンテーションに参加した日建設計の亀井忠夫社長は、コンペ案について次のように語る。「チャレンジングではあるが、実現可能な案だ。外観は控えめな造形でありながらも、タイムレスなデザインで、内部空間が豊か。当社がインハウスエンジニアを多数抱えた総合設計事務所であることも評価された」
+      %br/
+      %br/
+      = image_tag "/assets/23.jpg", alt: "image", class: 'List-Pic'
+      .Detail_Text2
+        南側から見るズベルバンク・シティー
+
+      .Detail_Heading
+        関連するタグ
+      .Detail_Border
+      .Recommend_list
+        = form_with local: true do |f|
+          .Recommend_btn
+            .btn
+              = link_to 'モスクワ', class: 'btn'
+            .btn
+              = link_to '日建設計', class: 'btn'
+            .btn
+              = link_to 'ロシア', class: 'btn'
+            .btn
+              = link_to 'コンペ', class: 'btn'
+
+  .RightSide
+    = render "right"

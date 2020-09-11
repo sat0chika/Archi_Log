@@ -127,7 +127,6 @@
   width: 720px;
   height: 200px;
   background-color: #F8F8F8;
-  // background-color: #F8F8F8;
   border: 2px solid #EEEEEE;
   padding: 19px;
   margin: 20px 20px 30px 0;
@@ -155,27 +154,31 @@
   }
   .Posts{
     display: flex;
-    .PostsIndex{
-      width: 250px;
+    .post-index{
+      width: 240px;
       height: 50px;
       background-color: #DDD;
       font-size: 20px;
-      padding: 10px 80px;
+      text-align: center;
+      padding-top: 8px;
+    }
+    .fab-index{
+      background-color: #ffce9e
+      // color: linen;
     }
     a{
       border: solid 1px #DDD;
-      width: 250px;
+      width: 240px;
       height: 50px;
       font-size: 20px;
-      padding: 10px 80px;
+      text-align: center;
+      padding-top: 8px;
     }
     a:hover {
       color: #f1f1f1;
     }
   }
 }
-
-
 
 .SubItems{
   display: flex;

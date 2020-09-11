@@ -3,6 +3,17 @@
 //   letter-spacing: 0.15em;
 //   font-family: 'Unica One', "Avenir", "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo, "メイリオ", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
 
+.Article{
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+
+.Detail{
+  width: 750px;
+  margin-right: 20px;
+}
 
 html {
   font-family: sans-serif;
@@ -52,30 +63,6 @@ form input, form textarea {
     }
 }
 
-//input & search form & a classの装飾
-// form input,
-// form textarea {
-//   width: 30vw;
-//   // margin: 5px 0 15px;
-//   padding: 10px;
-//   margin-left: 50px;
-//   border: 1px solid #D8D8D8;
-//   border-radius: 5px;
-//   font-family: "游ゴシック", "YuGothic";
-// }
-
-// form input[type="submit"] {
-//   width: 30vw;
-//   background-color: #fa4141;
-//   border-radius: 20px;
-//   color: #fff;
-//   border: 0;
-//   font-size: 18px;
-// }
-
-// form input[type="submit"]:hover {
-//   background-color: #ffb6c1;
-// }
 
 .search-form {
   text-align: center;
@@ -97,48 +84,6 @@ a {
   color: #666;
 }
 
-// a:hover {
-//   color: #f5c880;
-// }
-
-
-// 複数のプロパティを変数でまとめたものです。
-// @mixin page_size {
-//   width: 100%;
-//   height: 100vh;
-//   padding: 30px 60px 120px 60px;
-// }
-
-// @mixin page_body {
-//   width: 100vw;
-//   font-size: 30px;
-//   font-weight: 200;
-//   letter-spacing: 0.15em;
-// }
-
-// @mixin page_fixed{
-//   width: 100%;
-//   font-size: 30px;
-//   font-weight: 200;
-//   letter-spacing: 0.15em;
-// }
-
-// @mixin SubItems {
-//   background: #eee8aa;
-//   padding: 0 3px;
-//   border-radius: 4px;
-//   text-align: center;
-//   cursor: pointer;
-// }
-
-//new.html.hamlのcssをここから装飾する
-// .NewArticle {
-//   @include page_size;
-// }
-
-// .NewArticle__page {
-//   @include page_body;
-// }
 
 .NewArticle__erroer {
   padding: 20px 30px;
@@ -266,7 +211,6 @@ a {
   justify-content: space-between;
   width: 1040px; max-width: 100%;
   margin: 30px auto;
-  // background-color: aqua;
 }
 .TopicsBox{
   background-color: red;
@@ -277,7 +221,6 @@ a {
   word-wrap: break-word;
   &__Fabo{
     height: 60px;
-    // background-color: grey;
     position: relative;
     border-bottom: solid 1px rgb(241, 238, 238);
   }
@@ -290,11 +233,11 @@ a {
   display: flex;
 }
 .Topics-Pic{
-  height: 120px;
-  width: 170px;
+  height: 200px;
   margin-top: 30px;
   margin-left: 30px;
   background-color: greenyellow;
+  object-fit: cover;
 }
 .TopicsBox__Title{
   margin-top: 30px;
@@ -312,22 +255,14 @@ a {
   margin-left: 230px;
   position: absolute;
 }
-.fab-btn{
-  border-style: none;
-  color: rgb(165, 164, 164);
-  border-radius: 5px;
-  width: 130px;
-  margin-left: 380px;
-}
+
 .Text{
   margin-top: 80px;
-  // background-color: paleturquoise;
 }
 .Detail_Heading{
   font-size: 25px;
   font-weight: bolder;
-  padding: 20px, 30px, o;
-  // border-bottom: solid 2px grey;
+  padding: 20px, 30px, 0;
 }
 .Detail_Border{
   margin-top: 20px;
@@ -356,19 +291,6 @@ a {
   display: flex;
   padding-left: 200px;
 }
-
-// .SubItems {
-//   width: 10vw;
-//   display: flex;
-//   justify-content: space-around;
-//   margin: 10px 0;
-//   &__edit {
-//     @include SubItems;
-//   }
-//   &__detail {
-//     @include SubItems;
-//   }
-//   &__delete {
-//     @include SubItems;
-//   }
-// }
+.List-Pic{
+  width: 500px;
+}
