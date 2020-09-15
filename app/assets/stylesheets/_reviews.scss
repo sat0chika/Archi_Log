@@ -9,12 +9,6 @@
   border-bottom: solid 1px rgb(241, 238, 238);
 }
 
-.Under{
-  text-align: center;
-  background-color:#808080;
-  height: 100px;
-  padding-top: 25px;
-}
 .Header{
   display: flex;
   justify-content: space-between;
@@ -83,11 +77,17 @@
     position: relative;
     font-size: 25px;
   }
+  .Left{
+    width: 550px;
+    color: #fff;
+  }
+  .Right{
+    width: 550px;
+    color: #fff;
+    font-size: 25px;
+  }
 }
-.Left{
-  width: 550px;
-  color: #fff;
-}
+
 .Left__Writer{
   color: #fff;
   position: relative;
@@ -114,17 +114,22 @@
   width: 520px;
   position: absolute;
 }
-.Right{
-  width: 550px;
-  color: #fff;
-  font-size: 25px;
-}
-.Body{
-  padding: 0 200px;
-  height: 600px;
+
+
+.wrapper{
+  // padding: 0 200px;
+  // height: 600px;
 }
 .wrapper-1{
   display: flex;
+  justify-content: center;
+}
+.Under{
+  text-align: center;
+  background-color:#808080;
+  height: 100px;
+  padding-top: 25px;
+  margin-top: 20px;
 }
 
 .content{
@@ -189,12 +194,49 @@
   color: gray;
   margin-top: 15px;
 }
-.Runking{
-  width: 250px;
-  height: 500px;
-  margin-top: 20px;
-  border: solid 2px rgb(241, 238, 238);
+.Right{
+  .Runking{
+    width: 250px;
+    height: 500px;
+    margin-top: 20px;
+    border: solid 2px rgb(241, 238, 238);
+  }
+  .RecommendHeading{
+    width: 250px;
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 20px;
+    .Recommend_list{
+      display: flex;
+      flex-wrap: wrap;
+      .Recommend_btn{
+        padding-top: 15px;
+        display: flex;
+        flex-wrap: wrap;
+          .btn{
+            display: block;
+            width: 72px;
+            height: 20px;
+            font-size: 9px;
+            border-radius: 5px;
+            border: 2px solid transparent;
+            cursor: pointer;
+            text-align: center;
+            background-color: rgb(238, 238, 238);
+            margin-right: 3px;
+            margin-top: 3px;
+          }
+          a{
+            text-decoration: none;
+            color: black;
+            color: rgb(165, 164, 164);
+          }
+        }
+      }
+  }
 }
+
 .Runking__Heading{
   height: 30px;
   padding: 10px;
@@ -206,68 +248,42 @@
   margin: 5px;
   display: flex;
   align-items: flex-start;
+  .Recommended-Pic{
+    height: 70px;
+    width: 70px;
+    margin-right: 10px;
+    position: absolute;
+    object-fit: cover;
+  }
+  .Runking__num{
+    position: relative;
+    top: 0;
+    left: 0;
+    font-size: 12px;
+    width: 15px;
+    background-color: rgb(238, 163, 119);
+    color: #ffffff;
+  }
+  .Runking__Text__Heading{
+    margin-left: 60px;
+    font-size: 12px;
+    width: 150px;
+    height: 60px;
+    a{font-weight: lighter;
+      color: black}
+  }
 }
-.Recommended-Pic{
-  height: 70px;
-  width: 70px;
-  margin-right: 10px;
-  position: absolute;
-  object-fit: cover;
-}
-.Runking__num{
-  position: relative;
-  top: 0;
-  left: 0;
-  font-size: 12px;
-  width: 15px;
-  background-color: rgb(238, 163, 119);
-  color: #ffffff;
-}
-.Runking__Text__Heading{
-  margin-left: 60px;
-  font-size: 12px;
-  width: 150px;
-  height: 60px;
-  a{font-weight: lighter;
-    color: black}
-}
+
+
+
 .Runking__Text__Writer{
   margin-left: 60px;
   font-size: 8px;
   color: gray;
 }
-.Recommend_Heding{
-  margin-top: 30px;
-  font-weight: bold;
-  font-size: 15px;
-}
-.Recommend_list{
-display: flex;
-flex-wrap: wrap;
-.Recommend_btn{
-  padding-top: 15px;
-  display: flex;
-  flex-wrap: wrap;
-    .btn{
-      display: block;
-      width: 72px;
-      height: 20px;
-      font-size: 9px;
-      border-radius: 5px;
-      border: 2px solid transparent;
-      cursor: pointer;
-      text-align: center;
-      background-color: rgb(238, 238, 238);
-      margin-right: 3px;
-      margin-top: 3px;
-    }
-    a{
-      text-decoration: none;
-      color: black;
-      color: rgb(165, 164, 164);
-    }
-  }
-}
+
+
+
 
 .Profile{
   height: 200px;
@@ -356,6 +372,32 @@ flex-wrap: wrap;
   padding: 5px;
 }
 .Details{
-  height: 600px;
   padding: 20px 40px 0;
+  .Recommend_list{
+    display: flex;
+    flex-wrap: wrap;
+    .Recommend_btn{
+      padding-top: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      .btn{
+        display: block;
+        width: 72px;
+        height: 20px;
+        font-size: 9px;
+        border-radius: 5px;
+        border: 2px solid transparent;
+        cursor: pointer;
+        text-align: center;
+        background-color: rgb(238, 238, 238);
+        margin-right: 3px;
+        margin-top: 3px;
+      }
+      a{
+        text-decoration: none;
+        color: black;
+        color: rgb(165, 164, 164);
+      }
+    }
+  }
 }

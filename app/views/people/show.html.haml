@@ -4,7 +4,7 @@
   .Section_Box
     .UserInfo
       .UserInfo__icon
-        S
+        = image_tag "/assets/27.png", alt: "image", class: 'UserInfo__icon'
         = @icon
       .UserInfo__name
         = @name
@@ -41,3 +41,6 @@
 
   .RightSide
     = render "main/recommended"
+
+%footer
+= render "main/footer"
