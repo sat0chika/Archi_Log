@@ -1,0 +1,24 @@
+%header
+= render "main/header"
+.Section
+  .Section_Box
+    .UserInfo
+      .UserInfo__icon
+        = image_tag "/assets/28.jpg", alt: "image", class: 'UserInfo__icon'
+      .UserInfo__name
+        NIKKEN.com
+      .UserInfo__Text
+        日建設計広報部によるアカウントです。情報解禁になったプロジェクトやアンビルドになったコンペ案などをいち早く投稿しています。
+    .Posts
+      .PostsIndex
+        このライターの記事一覧(1件)
+    .PickUp__ProjectBox
+      = link_to image_tag("/assets/11.jpg", alt: "image", class: 'PickUp-Pic-1'), list_6_topics_path
+      .PickUp__Text
+      = link_to list_6_topics_path, class: "PickUp" do
+        ザハ事務所など抑えて日建設計が当選、ロシア最大手銀行のTODコンペ
+        .PickUp__Text__Letter
+          中央に見える緩く弧を描いた建物が「ズベルバンク・シティー」。手前にモスクワ川が流れる。間口最大30mの細長い敷地となっている。
+
+  .RightSide
+    = render "main/recommended"

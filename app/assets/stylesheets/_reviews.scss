@@ -45,6 +45,14 @@
 .User__Name{
   font-size: 13px;
 }
+.UserInfo__Text{
+  font-size: 13px;
+  color: #999999;
+  width: 500px;
+  margin-top: 80px;
+  margin-left: 175px;
+  position: absolute;
+}
 .User__Edit{
   margin-left: 10px;
   font-size: 13px;
@@ -163,8 +171,13 @@
 .PickUp-Pic{
   height: 130px;
   margin-right: 20px;
-  background-color: olive;
   object-fit: cover;
+}
+.PickUp-Pic-1{
+  height: 130px;
+  margin-right: 20px;
+  object-fit: cover;
+  width: 170px;
 }
 .PickUp__Text__Letter{
   font-size: 11px;
@@ -199,7 +212,6 @@
   width: 70px;
   margin-right: 10px;
   position: absolute;
-  background-color: lightblue;
   object-fit: cover;
 }
 .Runking__num{
@@ -263,20 +275,19 @@ flex-wrap: wrap;
   position: relative;
   padding: 14px;
   border: solid 2px rgb(241, 238, 238);
-  &__Icon{
+  .Icon{
     height: 60px;
     width: 60px;
     margin-top: 50px;
     position: absolute;
-    background-color: peru;
   }
-  &__Account{
+  .Account{
     // height: 170px;
     width: 130px;
     margin-left: 70px;
     font-weight: bold;
   }
-  &__Introdcution{
+  .Introduction{
     position: absolute;
     margin-top: 5px;
     margin-left: 70px;
@@ -284,18 +295,19 @@ flex-wrap: wrap;
     color: gray;
   }
 }
+
 .Profile-Pic{
   height: 60px;
   width: 60px;
   margin-top: 50px;
   position: absolute;
-  background-color: peru;
+  object-fit: cover;
 }
 
 .ConceptBox{
   height: 300px;
   background-color: rgb(252, 252, 252);
-  border: solid 1px rgb(241, 238, 238);;
+  border: solid 1px rgb(241, 238, 238);
   &__Fabo{
     height: 60px;
     position: relative;
@@ -325,7 +337,7 @@ flex-wrap: wrap;
 
 .ConceptBox_Text{
   font-size: 13px;
-  color: rgb(194, 194, 194);
+  color: #999999;
   width: 500px;
   margin-top: 120px;
   margin-left: 230px;

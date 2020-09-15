@@ -1,0 +1,24 @@
+%header
+= render "main/header"
+.Section
+  .Section_Box
+    .UserInfo
+      .UserInfo__icon
+        = image_tag "/assets/26.jpg", alt: "image", class: 'UserInfo__icon'
+      .UserInfo__name
+        Archi-TV
+      .UserInfo__Text
+        建築情報を放送しているネト番組です。学生の有志ボランティアもどしどし募集していますので、奮ってご応募お待ちしています！
+    .Posts
+      .PostsIndex
+        このライターの記事一覧(1件)
+    .PickUp__ProjectBox
+      = link_to image_tag("/assets/8.jpg", alt: "image", class: 'PickUp-Pic-1'), list_3_topics_path
+      .PickUp__Text
+      = link_to list_3_topics_path, class: "PickUp" do
+        台湾・新竹市の図書館コンペ、平田晃久チームが「知の峡谷」で最優秀に
+        .PickUp__Text__Letter
+          メインストリートからの見下ろし。道に対して大きく開いた部分がエントランス。街の文化ゾーンをつなぐグリーンベルトは反対側の道路へと続いている。
+
+  .RightSide
+    = render "main/recommended"

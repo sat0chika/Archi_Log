@@ -1,0 +1,24 @@
+%header
+= render "main/header"
+.Section
+  .Section_Box
+    .UserInfo
+      .UserInfo__icon
+        = image_tag "/assets/16.png", alt: "image", class: 'UserInfo__icon'
+      .UserInfo__name
+        アイロンヘッド
+      .UserInfo__Text
+        お笑いラジオや建築探訪が好きで、たまにネタを投稿したりしています。海外旅行などで観光名所を訪れることが好きです。
+    .Posts
+      .PostsIndex
+        このライターの記事一覧(1件)
+    .PickUp__ProjectBox
+      = link_to image_tag("/assets/2.jpg", alt: "image", class: 'PickUp-Pic-1'), list_2_topics_path
+      .PickUp__Text
+      = link_to list_2_topics_path, class: "PickUp" do
+        【スペイン】本当に2026年に完成予定！？
+        .PickUp__Text__Letter
+          完成までには300年以上を要すると言われていたスペイン随一の絶景スポット「サグラダ・ファミリア」。そんなサグラダ・ファミリアが、驚異的な工期短縮を見込めているのは一体なぜなのか、2026年完成予定の世界遺産の謎に迫ります。
+
+  .RightSide
+    = render "main/recommended"

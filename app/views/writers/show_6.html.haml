@@ -1,0 +1,26 @@
+%header
+= render "main/header"
+.Section
+  .Section_Box
+    .UserInfo
+      .UserInfo__icon
+        = image_tag "/assets/25.gif", alt: "image", class: 'UserInfo__icon'
+      .UserInfo__name
+        Poten-Poten
+      .UserInfo__Text
+        東京と長野の２拠点で設計活動を行っています。個人住宅から公共建築まで幅広く建築設計をしていますので、お仕事の依頼も是非受け付けています。
+        %br/
+        よろしくお願いします！
+    .Posts
+      .PostsIndex
+        このライターの記事一覧(1件)
+    .PickUp__ProjectBox
+      = link_to image_tag("/assets/12.jpg", alt: "image", class: 'PickUp-Pic-1'), list_7_topics_path
+      .PickUp__Text
+      = link_to list_7_topics_path, class: "PickUp" do
+        100者の応募を制したのはパーシモンヒルズ・アーキテクツ
+        .PickUp__Text__Letter
+          既存の民俗資料館（右手）と新しい公民館（中央上）、体育館（右下）によって囲まれた広場をつくり、町の顔とする。
+
+  .RightSide
+    = render "main/recommended"

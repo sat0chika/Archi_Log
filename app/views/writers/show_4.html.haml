@@ -1,0 +1,26 @@
+%header
+= render "main/header"
+.Section
+  .Section_Box
+    .UserInfo
+      .UserInfo__icon
+        = image_tag "/assets/27.png", alt: "image", class: 'UserInfo__icon'
+      .UserInfo__name
+        Satochi-Chan
+      .UserInfo__Text
+        建築系エンジニアのSatochi-Chanです。都内の建築を中心にコンペ結果などを投稿しています。よろしくお願いします。
+        %br/
+        @5atochika
+    .Posts
+      .PostsIndex
+        このライターの記事一覧(1件)
+    .PickUp__ProjectBox
+      = link_to image_tag("/assets/9.jpg", alt: "image", class: 'PickUp-Pic-1'), list_4_topics_path
+      .PickUp__Text
+      = link_to list_4_topics_path, class: "PickUp" do
+        在来軸組みのカワグチテイJV案に、徳島県「awaもくよんプロジェクト」
+        .PickUp__Text__Letter
+          周辺への圧迫感を抑えるように2棟に分け、建物を敷地中央にコンパクトにまとめて、敷地内に分節されたオープンスペースをつくる。中庭に緩やかな掘り込みのスロープを設け、東西通り抜けの通路とする。
+
+  .RightSide
+    = render "main/recommended"
