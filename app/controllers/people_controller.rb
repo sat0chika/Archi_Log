@@ -3,13 +3,14 @@ class PeopleController < ApplicationController
   def show
     person = Person.find(current_person.id)
     @name = person.name
-    @topics = person.topics.order("created_at DESC").limit(5)
+    @topics = person.topics.order("created_at DESC").limit(10)
   end
 
   def fab
     person = Person.find(current_person.id)
     @name = person.name
-    @topics = person.topics.order("created_at DESC").limit(5)
+    @topics = Topic.all
+    @like = Like.where(person_id: current_person.id)
   end
 
   def edit

@@ -48,7 +48,7 @@ class TopicsController < ApplicationController
 
   def show
     @topic = Topic.find(params[:id])
-    @likes_count = Like.where(topic_id: @topic.id).count
+    @like_count = Like.where(topic_id: @topic.id).count
   end
 
   def list_1

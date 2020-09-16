@@ -17,13 +17,11 @@
         .TopicsBox__Fab-btn
         - if current_person.already_liked?(@topic)
           .TopicsBox__Fab-btn
-            = link_to "いいねを取り消す", topic_likes_path(@topic), method: :delete, class: 'fab-btn'
+            = link_to "お気に入りを取り消す", topic_likes_path(@topic), method: :delete, class: 'fab-btn'
         - else
           .TopicsBox__Fab-btn
             = link_to "★お気に入りに追加", topic_likes_path(@topic), method: :post, class: 'fab-btn'
           -# = form_with local: true do |f|
-            -# = f.submit '★お気に入りに追加', class: 'fab-btn'
-
 
         -# - if person_signed_in? && topic.liked_by?(current_person)
         -#   = link_to topic_likes_path(topic.id),  method: :delete, class: "like-btn-unlike" , remote: true do

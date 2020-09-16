@@ -15,7 +15,7 @@ Rails.application.routes.draw do
       get 'list_7'
     end
   end
-  
+
   resources :people, only: [:show, :edit, :update] do
     collection do
       get 'fab'

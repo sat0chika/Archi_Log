@@ -1,6 +1,6 @@
 class Like < ApplicationRecord
   belongs_to :person
-  belongs_to :topic, counter_cache: :likes_count
+  belongs_to :topic, counter_cache: :like_count
 
   validates :person_id, presence: true
   validates :topic_id, presence: true
