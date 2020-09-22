@@ -2,7 +2,9 @@ class TopicsController < ApplicationController
   before_action :set_topic, only: [:edit, :update, :destroy]
 
   def index
+    @tag_list = Tag.all
     @topics =  Topic.all
+    @topic = current_person.topics.new 
   end
 
   def new
@@ -10,9 +12,10 @@ class TopicsController < ApplicationController
   end
 
   def create
-    @topic = Topic.create(topic_params)
-    if
-      @topic.save
+    @topic = Topic.new(topic_params)
+    tag_list = params[:topic][:tag_name].split(nil)
+    if @topic.save
+      @topic.save_tag(tag_list)
       flash[:notice] = "記事が投稿されました"
       redirect_to topic_path(@topic)
     else
@@ -49,6 +52,7 @@ class TopicsController < ApplicationController
   def show
     @topic = Topic.find(params[:id])
     @like_count = Like.where(topic_id: @topic.id).count
+    @topic_tags = @topic.tags
   end
 
   def list_1
@@ -75,7 +79,7 @@ class TopicsController < ApplicationController
   private
 
   def topic_params
-    params.require(:topic).permit(:title, :description, :image).merge(person_id: current_person.id)
+    params.require(:topic).permit(:title, :description, :image, tag_name: []).merge(person_id: current_person.id)
   end
 
   def set_topic

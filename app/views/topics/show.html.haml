@@ -17,25 +17,46 @@
         .TopicsBox__Fab-btn
         - if current_person.already_liked?(@topic)
           .TopicsBox__Fab-btn
-            = link_to "お気に入りを取り消す", topic_likes_path(@topic), method: :delete, class: 'fab-btn'
+            = link_to "お気に入りを取り消す", topic_likes_path(@topic), method: :delete, class: 'fab-btn', remote: true
         - else
           .TopicsBox__Fab-btn
-            = link_to "★お気に入りに追加", topic_likes_path(@topic), method: :post, class: 'fab-btn'
-          -# = form_with local: true do |f|
-
-        -# - if person_signed_in? && topic.liked_by?(current_person)
-        -#   = link_to topic_likes_path(topic.id),  method: :delete, class: "like-btn-unlike" , remote: true do
-        -#     %i.fas.fa-star
-        -#     = @likes_count
-
-        -# %div{:id => "fab-btn#{@topic.id}"}
-        -# = render partial: "likes/like", locals: { topic: @topic }
-
+            = link_to "★お気に入りに追加", topic_likes_path(@topic), method: :post, class: 'fab-btn', remote: true
 
     .Text
       .Text_Detail
         %span
         = markdown(@topic.description).html_safe
+
+    -# .Tags
+    -#   .Tag
+    -#     = @tag_list.each do |list|
+    -#   %span
+    -#     = link_to list.tag_name, tag_topics_path(tag_id: list.id)
+    -#     = "(#{list.topics.count})"
+
+    .Tags
+      .Tag
+    - @topic_tags.each do |tag|
+      "タグ: "
+    %span
+
+      -# = link_to tag.tag_name, tag_topics_path(tag_id: tag.id)
+      -# = "(#{tag.topics.count})"
+
+      .Detail_Heading
+        関連するタグ
+      .Detail_Border
+      .Recommend_list
+        = form_with local: true do |f|
+          .Recommend_btn
+            -# .btn
+            -#   = link_to '東京都', class: 'btn'
+            -# .btn
+            -#   = link_to '南青山', class: 'btn'
+            -# .btn
+            -#   = link_to '宮川清志', class: 'btn'
+            -# .btn
+            -#   = link_to 'SESN', class: 'btn'
 
 
     -# = link_to 'Edit', edit_topic_path(@topic.id), method: :get

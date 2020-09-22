@@ -6,14 +6,17 @@ class LikesController < ApplicationController
     @like.save
     @topic = Topic.find_by(id: @like.topic_id)
     @like_count = Like.where(topic_id: params[:topic_id]).count
-    render 'likes/create.js.erb'
+    if @like.save
+      redirect_to topic_path(params[:topic_id])
+    end
   end
 
   def destroy
     @like = Like.find_by(topic_id: params[:topic_id], person_id: current_person.id)
-    @like.destroy
     @like_count = Like.where(topic_id: params[:topic_id]).count
-    render 'likes/destroy.js.erb'
+    if @like.destroy
+      redirect_to topic_path(params[:topic_id])
+    end
   end
 
   def set_topic

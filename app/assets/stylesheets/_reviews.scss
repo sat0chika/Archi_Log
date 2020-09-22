@@ -204,33 +204,33 @@
     font-weight: bold;
     font-size: 15px;
     margin-top: 20px;
-    .Recommend_list{
-      display: flex;
-      flex-wrap: wrap;
-      .Recommend_btn{
-        padding-top: 15px;
-        display: flex;
-        flex-wrap: wrap;
-          .btn{
-            display: block;
-            width: 72px;
-            height: 20px;
-            font-size: 9px;
-            border-radius: 5px;
-            border: 2px solid transparent;
-            cursor: pointer;
-            text-align: center;
-            background-color: rgb(238, 238, 238);
-            margin-right: 3px;
-            margin-top: 3px;
-          }
-          a{
-            text-decoration: none;
-            color: black;
-            color: rgb(165, 164, 164);
-          }
-        }
-      }
+  }
+}
+.Recommend_list{
+  display: flex;
+  flex-wrap: wrap;
+  .Recommend_btn{
+    padding-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    .btn{
+      display: block;
+      width: 72px;
+      height: 20px;
+      font-size: 9px;
+      border-radius: 5px;
+      border: 2px solid transparent;
+      cursor: pointer;
+      text-align: center;
+      background-color: rgb(238, 238, 238);
+      margin-right: 3px;
+      margin-top: 3px;
+    }
+    a{
+      text-decoration: none;
+      color: black;
+      color: rgb(165, 164, 164);
+    }
   }
 }
 
@@ -358,6 +358,9 @@
 }
 .TopicsBox__Fab-btn{
   margin-top: 10px;
+  a:hover {
+    color: #fff49e;
+  }
 }
 .fab-btn{
   background-color: #e6e6e6;

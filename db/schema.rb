@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_16_045918) do
+ActiveRecord::Schema.define(version: 2020_09_17_080308) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,6 +39,21 @@ ActiveRecord::Schema.define(version: 2020_09_16_045918) do
     t.index ["reset_password_token"], name: "index_people_on_reset_password_token", unique: true
   end
 
+  create_table "tag_maps", force: :cascade do |t|
+    t.bigint "topic_id", null: false
+    t.bigint "tag_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["tag_id"], name: "index_tag_maps_on_tag_id"
+    t.index ["topic_id"], name: "index_tag_maps_on_topic_id"
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string "tag_name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "topics", force: :cascade do |t|
     t.string "title", null: false
     t.text "description", null: false
@@ -52,5 +67,7 @@ ActiveRecord::Schema.define(version: 2020_09_16_045918) do
 
   add_foreign_key "likes", "people"
   add_foreign_key "likes", "topics"
+  add_foreign_key "tag_maps", "tags"
+  add_foreign_key "tag_maps", "topics"
   add_foreign_key "topics", "people"
 end

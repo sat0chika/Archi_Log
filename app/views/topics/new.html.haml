@@ -4,7 +4,7 @@
   .NewTopic__page
     新規投稿
   .NewTopic__form
-    = form_with model: @topic do |f|
+    = form_with(model: @topic, url: topics_path, local: true) do |f|
       .FormBox
         トップ画を選んでください
         .ImageLogo
@@ -16,10 +16,24 @@
         .FormBox__input--normal
           = f.text_field :title, placeholder: "【東京】新国立競技場がついに竣工！"
         .FormBox__label--normal
-          = f.label :本文（マークダウン記法で入力してください）
+          = f.label :本文
         .FormBox__input--normal
           = f.text_area :description, rows: 10, placeholder: "新国立競技場は、「杜のスタジアム」と題し、”木”を取り入れた、周辺環境と調和するスタジアム。"
-      .action
+          .Tag
+            = form_with(model: @topic, url: topics_path, local: true) do |f|
+              = f.label :タグ
+          .TagPost
+            = f.text_field :tag_name, placeholder: "例：東京 千駄木 隈研吾"
+          -# %h3 投稿する
+          -# = form_with(model: @topic, url: topics_path, local: true) do |f|
+            -# = f.text_area :content
+            -# %br/
+            -# = "スペースを入力することで複数のタグを付けることができます。"
+            -# = "例：音楽 文芸 スポーツ"
+
+            -# %br/
+            -# = f.submit
+        -# .action
         = f.submit '投稿する'
       .return
         = link_to '戻る', person_path(:id)
