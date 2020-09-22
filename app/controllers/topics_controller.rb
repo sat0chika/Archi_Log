@@ -13,9 +13,9 @@ class TopicsController < ApplicationController
 
   def create
     @topic = Topic.new(topic_params)
-    tag_list = params[:topic][:tag_name].split(nil)
+    # tag_list = params[:topic][:tag_name].split(nil)
     if @topic.save
-      @topic.save_tag(tag_list)
+      # @topic.save_tag(tag_list)
       flash[:notice] = "記事が投稿されました"
       redirect_to topic_path(@topic)
     else
@@ -55,31 +55,50 @@ class TopicsController < ApplicationController
     @topic_tags = @topic.tags
   end
 
+  def index_1
+    @tag_list = Tag.all
+    @topics =  Topic.all
+  end
+
   def list_1
+    @person = Person.find(current_person.id)
+    @icon = @person.icon
   end
 
   def list_2
+    @person = Person.find(current_person.id)
+    @icon = @person.icon
   end
 
   def list_3
+    @person = Person.find(current_person.id)
+    @icon = @person.icon
   end
 
   def list_4
+    @person = Person.find(current_person.id)
+    @icon = @person.icon
   end
 
   def list_5
+    @person = Person.find(current_person.id)
+    @icon = @person.icon
   end
 
   def list_6
+    @person = Person.find(current_person.id)
+    @icon = @person.icon
   end
 
   def list_7
+    @person = Person.find(current_person.id)
+    @icon = @person.icon
   end
 
   private
 
   def topic_params
-    params.require(:topic).permit(:title, :description, :image, tag_name: []).merge(person_id: current_person.id)
+    params.require(:topic).permit(:title, :heading, :description, :image, tag_name: []).merge(person_id: current_person.id)
   end
 
   def set_topic

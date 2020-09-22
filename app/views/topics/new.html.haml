@@ -12,18 +12,22 @@
             = icon('far', 'image', class: 'ImageLogo__icon')
             = f.file_field :image, class: 'file'
         .FormBox__label--normal
+          = f.label :タイトル
+        .FormBox__input--normal
+          = f.text_field :title, placeholder: "タイトルを入れてください(34文字以内)"
+        .FormBox__label--normal
           = f.label :見出し
         .FormBox__input--normal
-          = f.text_field :title, placeholder: "【東京】新国立競技場がついに竣工！"
+          = f.text_area :heading, placeholder: "見出しを入れてください"
         .FormBox__label--normal
           = f.label :本文
         .FormBox__input--normal
-          = f.text_area :description, rows: 10, placeholder: "新国立競技場は、「杜のスタジアム」と題し、”木”を取り入れた、周辺環境と調和するスタジアム。"
-          .Tag
-            = form_with(model: @topic, url: topics_path, local: true) do |f|
-              = f.label :タグ
-          .TagPost
-            = f.text_field :tag_name, placeholder: "例：東京 千駄木 隈研吾"
+          = f.text_area :description, rows: 10, placeholder: "本文を入れてください"
+          -# .Tag
+          -#   = form_with(model: @topic, url: topics_path, local: true) do |f|
+          -#     = f.label :タグ
+          -# .TagPost
+          -#   = f.text_field :tag_name, placeholder: "タグ1 タグ2 タグ3"
           -# %h3 投稿する
           -# = form_with(model: @topic, url: topics_path, local: true) do |f|
             -# = f.text_area :content

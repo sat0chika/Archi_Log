@@ -11,16 +11,18 @@
     .TopicsBox__Hedding
       .TopicsBox__Picture
         = image_tag (@topic.image_url), class: 'Topics-Pic'
-      .TopicsBox__Title
-        = @topic.title
-      .TopicsBox_Text
-        .TopicsBox__Fab-btn
-        - if current_person.already_liked?(@topic)
-          .TopicsBox__Fab-btn
-            = link_to "お気に入りを取り消す", topic_likes_path(@topic), method: :delete, class: 'fab-btn', remote: true
-        - else
-          .TopicsBox__Fab-btn
-            = link_to "★お気に入りに追加", topic_likes_path(@topic), method: :post, class: 'fab-btn', remote: true
+      .TopicsSec
+        .TopicsBox__Title
+          = @topic.title
+        .TopicsBox_Text
+          = @topic.heading
+    .Favorite
+    - if current_person.already_liked?(@topic)
+      .Fav-btn
+        = link_to "お気に入りを取り消す", topic_likes_path(@topic), method: :delete, class: 'fav-btn', remote: true
+    - else
+      .Fav-btn
+        = link_to "★お気に入りに追加", topic_likes_path(@topic), method: :post, class: 'fav-btn', remote: true
 
     .Text
       .Text_Detail
@@ -44,8 +46,8 @@
       -# = "(#{tag.topics.count})"
 
       .Detail_Heading
-        関連するタグ
-      .Detail_Border
+      -#   関連するタグ
+      -# .Detail_Border
       .Recommend_list
         = form_with local: true do |f|
           .Recommend_btn

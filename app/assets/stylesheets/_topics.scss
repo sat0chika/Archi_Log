@@ -229,7 +229,7 @@ a {
   display: flex;
 }
 .Topics-Pic{
-  height: 200px;
+  height: 170px;
   margin-top: 30px;
   margin-left: 30px;
   background-color: greenyellow;
@@ -240,16 +240,31 @@ a {
   margin-left: 20px;
   font-size: 30px;
   font-weight: bold;
-  width: 500px;
+  width: 90%;
   word-wrap: break-word;
 }
 .TopicsBox_Text{
   font-size: 13px;
   color: rgb(194, 194, 194);
   width: 500px;
-  margin-top: 190px;
-  margin-left: 230px;
+  margin-top: 30px;
+  margin-left: 20px;
   position: absolute;
+}
+.Favorite{
+  a:hover {
+    color: #fff49e;
+  }
+}
+.fav-btn{
+  background-color: #e6e6e6;
+  border-style: none;
+  color: rgb(165, 164, 164);
+  border-radius: 5px;
+  width: 130px;
+  margin-left: 580px;
+  padding: 5px;
+  font-size: 13px;
 }
 
 .Text{

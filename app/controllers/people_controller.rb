@@ -1,8 +1,11 @@
 class PeopleController < ApplicationController
 
   def show
+    @person = Person.find(params[:id])
     person = Person.find(current_person.id)
     @name = person.name
+    @introduction = person.introduction
+    @icon = person.icon
     @topics = person.topics.order("created_at DESC").limit(10)
   end
 
@@ -28,7 +31,7 @@ class PeopleController < ApplicationController
   private
 
   def person_params
-    params.require(:person).permit(:name, :email, :password, :password_confirmation, :introduce, :image)
+    params.require(:person).permit(:name, :email, :introduction, :icon, :password, :password_confirmation, :introduce, :image)
   end
 
 end

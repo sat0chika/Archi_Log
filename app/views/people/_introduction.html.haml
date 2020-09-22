@@ -1,13 +1,12 @@
 .IntroTemple
   .UserInfo
     .UserInfo__icon
-      = image_tag "/assets/27.png", alt: "image", class: 'UserInfo__icon'
-      = @icon
+      - if @person.icon?
+        = image_tag @icon.url, class: 'UserInfo__icon'
     .UserInfo__name
       = @name
     .UserInfo__Text
-      ここは自己紹介文を入力するところです。ここは自己紹介文を入力するところです。ここは自己紹介文を入力するところです。ここは自己紹介文を入力するところです。ここは自己紹介文を入力するところです。ここは自己紹介文を入力するところです。
-      = @text
+      = @introduction
       .UserInfo__contents
   .Posts
     -# = link_to "/people/#{current_person.id}"

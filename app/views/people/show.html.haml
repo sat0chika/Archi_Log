@@ -3,8 +3,8 @@
 .Fab
   .FabSection
     = render "introduction"
-    .Section
-      .Section_Box
+    .ProfSection
+      .ProfSectionBox
       - @topics.each do |topic|
         .PickUp__ProjectBox
           = link_to topic_path(topic.id) do

@@ -13,6 +13,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  .User__Icon{
+    border-radius: 50%;
+    font-size: 7px;
+    padding-left: 1.1em;
+    padding-right: 1.1em;
+    margin-right: 5px;
+    width: 45px;
+    height: 30px;
+    object-fit: cover;
+  }
 }
 .Search{
   display: flex;
@@ -25,17 +35,7 @@
 .User{
   display: flex;
 }
-.User__Icon{
-  border-radius: 50%;
-  font-size: 7px;
-  line-height: 2.5em;
-  padding-top: 0.5em;
-  padding-left: 1.2em;
-  padding-right: 1.2em;
-  color: #fff;
-  background: rgb(230, 123, 230);
-  margin-right: 5px;
-}
+
 .User__Name{
   font-size: 13px;
 }

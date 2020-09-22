@@ -23,4 +23,14 @@
           = f.label :email
         .FormField__input--normal
           = f.email_field :email
+      .FormField
+        = f.label :icon, class: 'ProfIcon' do
+          = icon('far', 'image', class: 'icon')
+          = f.file_field :icon, class: 'file'
+      .FormField
+        .FormField__label--normal
+          = f.label :introduction
+        .FormField__input--normal
+          = f.text_area :introduction
+
       = f.submit "Update", class: 'Button UserButton'

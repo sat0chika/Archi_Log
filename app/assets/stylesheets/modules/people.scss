@@ -125,9 +125,13 @@
   justify-content: center;
 }
 
+.ProfIcon {
+  font-size: 30px;
+}
+
 .SubItems{
   display: flex;
-  margin-left: 300px;
+  margin-left: 200px;
   font-size: 12px;
   .SubItems__edit{margin-right: 5px;}
   .SubItems__detail{margin-right: 5px;}

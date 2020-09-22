@@ -13,6 +13,7 @@ Rails.application.routes.draw do
       get 'list_5'
       get 'list_6'
       get 'list_7'
+      get 'index_1'
     end
   end
 
