@@ -13,11 +13,15 @@
             = icon('far', 'image', class: 'ImageLogo__icon')
             = f.file_field :image, class: 'file'
         .FormBox__label--normal
-          = f.label :見出し
+          = f.label :タイトル
         .FormBox__input--normal
           = f.text_field :title
         .FormBox__label--normal
-          = f.label :本文（マークダウン記法で入力してください）
+          = f.label :見出し
+        .FormBox__input--normal
+          = f.text_area :heading
+        .FormBox__label--normal
+          = f.label :本文
         .FormBox__input--normal
           = f.text_area :description, rows: 10
       .action

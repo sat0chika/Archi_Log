@@ -1,7 +1,7 @@
 class PeopleController < ApplicationController
 
   def show
-    @person = Person.find(params[:id])
+    @person = Person.find(current_person.id)
     person = Person.find(current_person.id)
     @name = person.name
     @introduction = person.introduction
@@ -10,8 +10,11 @@ class PeopleController < ApplicationController
   end
 
   def fab
+    @person = Person.find(current_person.id)
+    @icon = @person.icon
     person = Person.find(current_person.id)
     @name = person.name
+    @introduction = person.introduction
     @topics = Topic.all
     @like = Like.where(person_id: current_person.id)
   end

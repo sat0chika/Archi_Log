@@ -1,0 +1,9 @@
+.Profile
+  = link_to writers_path do
+    .Profile__Icon
+      - if @person.icon?
+        = image_tag @topic.person.icon_url, class: 'Profile-Pic'
+    .Account
+      = @topic.person.name
+    .Introduction
+      = @topic.person.introduction

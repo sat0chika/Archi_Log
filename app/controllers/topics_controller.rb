@@ -9,9 +9,12 @@ class TopicsController < ApplicationController
 
   def new
     @topic = Topic.new
+    @person = Person.find(current_person.id)
+    @icon = @person.icon
   end
 
   def create
+    @person = Person.find(current_person.id)
     @topic = Topic.new(topic_params)
     # tag_list = params[:topic][:tag_name].split(nil)
     if @topic.save
@@ -41,6 +44,12 @@ class TopicsController < ApplicationController
     end
   end
 
+  def search
+    @topics = Topic.search(params[:keyword])
+    @person = Person.find(current_person.id)
+    @icon = @person.icon
+    # @topics =  Topic.all
+  end
 
   def destroy
     # @topic = Topic.find(params[:id])
@@ -50,6 +59,13 @@ class TopicsController < ApplicationController
   end
 
   def show
+
+    @topic = Topic.find_by(id: params[:id])
+    @person = Person.find_by(id: @topic.person_id)
+
+
+    @person = Person.find(current_person.id)
+    @icon = @person.icon
     @topic = Topic.find(params[:id])
     @like_count = Like.where(topic_id: @topic.id).count
     @topic_tags = @topic.tags

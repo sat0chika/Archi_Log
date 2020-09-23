@@ -14,6 +14,7 @@ Rails.application.routes.draw do
       get 'list_6'
       get 'list_7'
       get 'index_1'
+      get 'search'
     end
   end
 
@@ -25,6 +26,7 @@ Rails.application.routes.draw do
 
   resources :writers do
     collection do
+      get 'show'
       get 'show_1'
       get 'show_2'
       get 'show_3'

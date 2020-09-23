@@ -4,7 +4,6 @@
       .Title
         = link_to root_path, class: "title" do
           %h1 archi log(仮)
-
 .AccountPage
   .AccountPage__title
     %h2 Edit Account
@@ -25,7 +24,7 @@
           = f.email_field :email
       .FormField
         = f.label :icon, class: 'ProfIcon' do
-          = icon('far', 'image', class: 'icon')
+          = icon('fas', 'user', class: 'icon')
           = f.file_field :icon, class: 'file'
       .FormField
         .FormField__label--normal

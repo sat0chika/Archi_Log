@@ -1,0 +1,38 @@
+%header
+= render "main/header"
+.Section
+  .Section_Box
+    .UserInfo
+    -#   .UserInfo__icon
+    -#     = image_tag "/assets/13.jpg", alt: "image", class: 'UserInfo__icon'
+    -#   .UserInfo__name
+    -#     わだこうへいた
+    -#   .UserInfo__Text
+    -#     3DS MAXを使ったCG作成が得意です。普段は多て設計事務所勤務ですが、たまに個人でも活動しています。
+    -#     %br/
+    -#     インスタにはプロジェクトをUPしているので、フォローミー。
+    -#     %br/
+    -#     @Koheta_jpg
+    -# .Posts
+    -#   .PostsIndex
+    -#     このライターの記事一覧(2件)
+    -# .PickUp__ProjectBox
+    -#   = link_to image_tag("/assets/1.jpg", alt: "image", class: 'PickUp-Pic-1'), list_1_topics_path
+    -#   .PickUp__Text
+    -#   = link_to list_1_topics_path, class: "PickUp" do
+    -#     【東京】新国立競技場がついに竣工！
+    -#     .PickUp__Text__Letter
+    -#       新国立競技場は、「杜のスタジアム」と題し、”木”を取り入れた、周辺環境と調和するスタジアム。木材と鉄骨のハイブリッド構造の屋根となっており、高さを約47.4mと低く設定することで、水平なラインを強調した、圧迫感の少ないデザインを採用している。
+    -# .PickUp__ProjectBox
+    -#   = link_to image_tag("/assets/10.jpg", alt: "image", class: 'PickUp-Pic-1'), list_5_topics_path
+    -#   .PickUp__Text
+    -#   = link_to list_5_topics_path, class: "PickUp" do
+    -#     宮川清志 / SESNによる、美容クリニック「Men’s Clara」
+    -#     .PickUp__Text__Letter
+    -#       宮川清志 / SESNが設計した、東京・港区南青山の、美容クリニック「Men’s Clara」です。
+
+  .RightSide
+    = render "main/recommended"
+
+%footer
+= render "main/footer"

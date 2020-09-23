@@ -51,14 +51,6 @@
       .Recommend_list
         = form_with local: true do |f|
           .Recommend_btn
-            -# .btn
-            -#   = link_to '東京都', class: 'btn'
-            -# .btn
-            -#   = link_to '南青山', class: 'btn'
-            -# .btn
-            -#   = link_to '宮川清志', class: 'btn'
-            -# .btn
-            -#   = link_to 'SESN', class: 'btn'
 
 
     -# = link_to 'Edit', edit_topic_path(@topic.id), method: :get
@@ -66,7 +58,7 @@
 
   .RightSide
     .wrapper
-    = render "writers/profile_4"
+    = render "writers/profile"
     = render "main/recommended"
 
 %footer

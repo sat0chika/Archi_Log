@@ -1,9 +1,10 @@
 .Top
-  = form_with local: true do |f|
+  = form_with(url: search_topics_path, local: true, method: :get) do |f|
     .Header
       .Search
-        = f.text_field :name, class: 'Form_input', placeholder: 'キーワード（例：隈研吾）'
+        = f.text_field :keyword, placeholder: 'キーワード（例：隈研吾）', class: 'Form_input'
         = f.submit class: 'Search', value: '検索'
+        -# = link_to search_topics_path
       .Title
         = link_to root_path, class: "title" do
           %h1 archi log(仮)

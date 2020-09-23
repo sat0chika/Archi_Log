@@ -1,5 +1,10 @@
 class WritersController < ApplicationController
 
+  def show
+    @person = Person.find(current_person.id)
+    @icon = @person.icon
+  end
+
   def show_1
     @person = Person.find(current_person.id)
     @icon = @person.icon
