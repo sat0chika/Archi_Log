@@ -83,3 +83,6 @@ production:
   database: Archi_Log_production
   username: Archi_Log
   password: <%= ENV['ARCHI_LOG_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
