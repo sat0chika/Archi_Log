@@ -1,28 +1,55 @@
 %header
 = render "main/header"
 .Fab
-  .FabSection
-    = render "introduction"
-    .ProfSection
-      .ProfSectionBox
-      - @topics.each do |topic|
-        .PickUp__ProjectBox
-          = link_to topic_path(topic.id) do
-            = image_tag topic.image.url, class: "PickUp-Pic"
-          .PickUp__Text
-            = link_to topic_path(topic.id), class: "PickUp" do
-              = topic.title
-            .PickUp__Text__Letter
-              = topic.description
-            .SubItems
-              -# - if person_signed_in? && current_user.id == topic.person_id
-              .SubItems__edit
-                = link_to '編集', edit_topic_path(topic.id), method: :get
-              .SubItems__detail
-                = link_to '詳細', topic_path(topic.id), method: :get
-              .SubItems__delete
-                = link_to '削除', topic_path(topic.id), method: :delete, data: {confirm: "本当に削除しますか?"}
+  - if current_person.try(:id) == @person.id
+    .FabSection
+      = render "introduction"
+      .ProfSection
+        .ProfSectionBox
+        - @topics.each do |topic|
+          .PickUp__ProjectBox
+            = link_to topic_path(topic.id) do
+              = image_tag topic.image.url, class: "PickUp-Pic"
+            .PickUp__Text
+              = link_to topic_path(topic.id), class: "PickUp" do
+                = topic.title
+              .PickUp__Text__Letter
+                = topic.heading
+              .PickUp__Text__Writer
+                = topic.person.name
+              .SubItems
+                .SubItems__edit
+                  = link_to '編集', edit_topic_path(topic.id), method: :get
+                .SubItems__detail
+                  = link_to '詳細', topic_path(topic.id), method: :get
+                .SubItems__delete
+                  = link_to '削除', topic_path(topic.id), method: :delete, data: {confirm: "本当に削除しますか?"}
 
+  - else
+    .Section
+      .Section_Box
+        .UserInfo
+          .UserInfo__icon
+            - if @person.icon?
+              = image_tag @person.icon.url, class: 'UserInfo__icon'
+          .UserInfo__name
+            = @person.name
+          .UserInfo__Text
+            = @person.introduction
+        .Posts
+          .PostsIndex
+            = "このライターの記事一覧(#{@topics.count}件)"
+        - @topics.each do |topic|
+          .PickUp__ProjectBox
+            = link_to topic_path(topic.id) do
+              = image_tag topic.image.url, class: "PickUp-Pic"
+              .PickUp__Text
+              = link_to topic_path(topic.id), class: "PickUp" do
+                = topic.title
+                .PickUp__Text__Letter
+                  = topic.heading
+                .PickUp__Text__Writer
+                  = @person.name
 
   .RightSide
     = render "main/recommended"

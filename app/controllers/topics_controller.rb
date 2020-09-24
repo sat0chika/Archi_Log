@@ -15,6 +15,7 @@ class TopicsController < ApplicationController
 
   def create
     @person = Person.find(current_person.id)
+    @icon = @person.icon
     @topic = Topic.new(topic_params)
     # tag_list = params[:topic][:tag_name].split(nil)
     if @topic.save
@@ -28,9 +29,8 @@ class TopicsController < ApplicationController
 
   def edit
     @topic = Topic.find(params[:id])
-    # unless @topic.user_id == current_user.id
-    #   redirect_to root_path
-    # end
+    @person = Person.find(current_person.id)
+    @icon = @person.icon
   end
 
   def update
@@ -62,7 +62,6 @@ class TopicsController < ApplicationController
 
     @topic = Topic.find_by(id: params[:id])
     @person = Person.find_by(id: @topic.person_id)
-
 
     @person = Person.find(current_person.id)
     @icon = @person.icon

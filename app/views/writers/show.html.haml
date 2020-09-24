@@ -3,8 +3,10 @@
 .Section
   .Section_Box
     .UserInfo
-    -#   .UserInfo__icon
-    -#     = image_tag "/assets/13.jpg", alt: "image", class: 'UserInfo__icon'
+      .UserInfo__icon
+        - if @person.icon?
+          = image_tag @topic.person.icon_url, class: 'UserInfo__icon'
+        -# = image_tag "/assets/13.jpg", alt: "image", class: 'UserInfo__icon'
     -#   .UserInfo__name
     -#     わだこうへいた
     -#   .UserInfo__Text

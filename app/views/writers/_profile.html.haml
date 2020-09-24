@@ -1,5 +1,7 @@
 .Profile
-  = link_to writers_path do
+  -# = link_to current_person.name, "/people/#{current_person.id}"
+
+  = link_to "/people/#{@topic.person.id}" do
     .Profile__Icon
       - if @person.icon?
         = image_tag @topic.person.icon_url, class: 'Profile-Pic'

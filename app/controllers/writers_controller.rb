@@ -1,6 +1,9 @@
 class WritersController < ApplicationController
 
   def show
+    @topic = Topic.find_by(id: params[:id])
+    @person = Person.find_by(id: @topic.person_id)
+
     @person = Person.find(current_person.id)
     @icon = @person.icon
   end
