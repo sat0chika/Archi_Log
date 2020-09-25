@@ -62,11 +62,11 @@ class TopicsController < ApplicationController
 
     @topic = Topic.find_by(id: params[:id])
     @person = Person.find_by(id: @topic.person_id)
+    @like_count = Like.where(topic_id: @topic.id).count
 
     @person = Person.find(current_person.id)
     @icon = @person.icon
     @topic = Topic.find(params[:id])
-    @like_count = Like.where(topic_id: @topic.id).count
     @topic_tags = @topic.tags
   end
 

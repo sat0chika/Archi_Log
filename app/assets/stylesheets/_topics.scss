@@ -46,7 +46,7 @@ html {
   padding-bottom: 30px;
 }
 form input, form textarea {
-  width: 30vw;
+  width: 20vw;
   padding: 3px;
   border: 1px solid #D8D8D8;
   border-radius: 5px;
@@ -65,7 +65,7 @@ form input, form textarea {
 
 
 .search-form {
-  text-align: center;
+  // text-align: center;
   padding-top: 20px;
   
 }
@@ -209,7 +209,6 @@ a {
   margin: 30px auto;
 }
 .TopicsBox{
-  background-color: red;
   height: 300px;
   background-color: rgb(252, 252, 252);
   border: solid 1px rgb(241, 238, 238);
@@ -246,12 +245,12 @@ a {
 .TopicsBox_Text{
   font-size: 13px;
   color: rgb(194, 194, 194);
-  width: 500px;
-  margin-top: 30px;
+  width: 450px;
+  margin-top: 15px;
   margin-left: 20px;
   position: absolute;
 }
-.Favorite{
+.Fav-btn{
   a:hover {
     color: #fff49e;
   }
@@ -262,7 +261,7 @@ a {
   color: rgb(165, 164, 164);
   border-radius: 5px;
   width: 130px;
-  margin-left: 580px;
+  margin-left: 300px;
   padding: 5px;
   font-size: 13px;
 }

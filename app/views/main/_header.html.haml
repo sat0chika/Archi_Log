@@ -10,8 +10,8 @@
           %h1 archi log
       .User
         .User__Icon
-          - if @person.icon?
-            = image_tag @icon.url, class: 'User__Icon'
+          - if current_person.icon?
+            = image_tag current_person.icon.url, class: 'User__Icon'
         .User__Name
         = link_to current_person.name, "/people/#{current_person.id}"
         .User__Edit

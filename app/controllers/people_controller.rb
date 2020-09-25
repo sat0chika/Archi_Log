@@ -5,12 +5,12 @@ class PeopleController < ApplicationController
     person = Person.find(params[:id])
     @person = Person.name
     @topics = person.topics
+    @icon = person.icon
 
     @person = Person.find_by(id: params[:id])
 
     @name = person.name
     @introduction = person.introduction
-    @icon = person.icon
     # @topics = person.topics.order("created_at DESC").limit(10)
     # @topics = Topic.where(person_id: @parson)
     # @person = Person.find(current_person.id)
