@@ -2,7 +2,7 @@
 
 # Archi_Log
 
-![トップ画.png](https://github.com/quin001cunx/newRead/blob/master/トップ画.png)
+![トップ画](https://user-images.githubusercontent.com/67260509/94368027-0b49d700-011d-11eb-883f-5568a015a3e7.png)
 
 ## peopleテーブル
 |Column|Type|Options|
