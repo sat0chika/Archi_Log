@@ -4,6 +4,8 @@
 
 ![トップ画](https://user-images.githubusercontent.com/67260509/94368027-0b49d700-011d-11eb-883f-5568a015a3e7.png)
 
+![Uploading 16d0b0f189133673b6d674cb7ba1ff9c.gif…]()
+
 ## peopleテーブル
 |Column|Type|Options|
 |------|----|-------|
