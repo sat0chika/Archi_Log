@@ -2,7 +2,7 @@
 
 # Archi_Log
 
-![トップ画.png](/トップ画.png)
+![トップ画.png](./トップ画.png)
 
 ## peopleテーブル
 |Column|Type|Options|
