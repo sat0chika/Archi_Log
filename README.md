@@ -2,6 +2,8 @@
 
 # Archi_Log
 
+https://archilog.herokuapp.com/
+
 ## peopleテーブル
 |Column|Type|Options|
 |------|----|-------|
