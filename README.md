@@ -2,7 +2,7 @@
 
 # Archi_Log
 
-![トップ画.png](./トップ画.png)
+![トップ画.png](https://github.com/quin001cunx/newRead/blob/master/トップ画.png)
 
 ## peopleテーブル
 |Column|Type|Options|
