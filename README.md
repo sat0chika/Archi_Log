@@ -3,7 +3,8 @@
 ![16d0b0f189133673b6d674cb7ba1ff9c](https://user-images.githubusercontent.com/67260509/94368727-bdcf6900-0120-11eb-9dbf-b00b3c5e9901.gif)
 
 ## 概要
-建築情報のまとめサイトを作成しました。
+建築情報のまとめサイトです。
+favyというグルメアプリを参考にして作成しました。
 
 ## 本番環境
 * URL:https://archilog.herokuapp.com/
