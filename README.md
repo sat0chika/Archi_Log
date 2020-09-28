@@ -56,7 +56,7 @@
 記事詳細画面からクリックすると投稿者情報が表示されます。
 ![投稿者画面](https://user-images.githubusercontent.com/67260509/94393304-9bc3fe00-0195-11eb-8de4-1f46680431cb.png)<br>
 
-## トップ画面
+## トップ画面説明
 ![説明](https://user-images.githubusercontent.com/67260509/94383678-b9846980-017b-11eb-930d-24986e8e8ee6.jpg)<br>
 
 
