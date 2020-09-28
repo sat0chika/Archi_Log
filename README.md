@@ -15,4 +15,5 @@ https://archilog.herokuapp.com/
 
 
 # 👀 Author
-・[Github](https://github.com/sat0chika)　　・[Twitter](https://twitter.com/5atochika)
+・[Github](https://github.com/sat0chika)<br>
+・[Twitter](https://twitter.com/5atochika)
