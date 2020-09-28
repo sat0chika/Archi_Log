@@ -28,8 +28,24 @@
 <img width="294" alt="検索画面" src="https://user-images.githubusercontent.com/67260509/94392606-b5fcdc80-0193-11eb-9082-30ff3f8a571a.png">
 
 ## 3.記事の詳細表示
-タイトルと記事どちらかのキーワードとヒットした結果が表示されます。
+一覧画面からクリックすると記事情報が表示されます。
 ![詳細ページ](https://user-images.githubusercontent.com/67260509/94383705-cacd7600-017b-11eb-9d53-67fe407a7924.jpg)
+
+## 4.登録情報編集
+登録者の紹介文やアイコンを追加することができます。
+![マイページ編集画面](https://user-images.githubusercontent.com/67260509/94395362-7be30900-019a-11eb-995b-fa27fece7b02.png)
+
+## 5.お気に入り登録
+お気に入り登録をするとマイページに追加されます。
+![お気に入り登録](https://user-images.githubusercontent.com/67260509/94393622-6cfa5780-0196-11eb-88e0-384401d33aa0.png)
+
+## 6.マイページ詳細
+マイページでは投稿一覧やお気に入り一覧を確認することができます。
+![マイページ画面](https://user-images.githubusercontent.com/67260509/94394855-4f7abd00-0199-11eb-868a-34f57c206f48.png)
+
+## 7.投稿者の詳細表示
+記事詳細画面からクリックすると投稿者情報が表示されます。
+![投稿者画面](https://user-images.githubusercontent.com/67260509/94393304-9bc3fe00-0195-11eb-8de4-1f46680431cb.png)
 
 ## トップ画面
 ![説明](https://user-images.githubusercontent.com/67260509/94383678-b9846980-017b-11eb-930d-24986e8e8ee6.jpg)
