@@ -8,12 +8,14 @@
 建築情報のまとめサイトを作成しました。
 
 ## 開発環境
-・Ruby<br>
-・Ruby on Rails<br>
-・PostgreSQL<br>
-・Github<br>
-・Heroku<br>
-・VSCode（Visual Studio Code）
+*Ruby<br>
+*Ruby on Rails<br>
+*PostgreSQL<br>
+*Github<br>
+*Heroku<br>
+*VSCode（Visual Studio Code）
+
+
 
 # 📦アプリ機能
 
@@ -29,5 +31,5 @@ https://archilog.herokuapp.com/
 
 
 # 👀 Author
-・[Github](https://github.com/sat0chika)<br>
-・[Twitter](https://twitter.com/5atochika)
+*[Github](https://github.com/sat0chika)<br>
+*[Twitter](https://twitter.com/5atochika)
