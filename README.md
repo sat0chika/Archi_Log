@@ -1,4 +1,4 @@
-### README
+
 
 # Archi_Log
 
@@ -9,3 +9,10 @@
 ![説明](https://user-images.githubusercontent.com/67260509/94383678-b9846980-017b-11eb-930d-24986e8e8ee6.jpg)
 
 ![詳細ページ](https://user-images.githubusercontent.com/67260509/94383705-cacd7600-017b-11eb-9d53-67fe407a7924.jpg)
+
+# 🌐App URL
+https://archilog.herokuapp.com/
+
+
+# 👀 Author
+・Twitter
