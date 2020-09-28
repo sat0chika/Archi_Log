@@ -1,11 +1,15 @@
-
-
-# Archi Log
+# Archi Log<br>
 
 ![16d0b0f189133673b6d674cb7ba1ff9c](https://user-images.githubusercontent.com/67260509/94368727-bdcf6900-0120-11eb-9dbf-b00b3c5e9901.gif)
 
 ## 概要
 建築情報のまとめサイトを作成しました。
+
+## 本番環境
+* URL:https://archilog.herokuapp.com/
+* テスト用アカウント
+  * メールアドレス:test1@test
+  * パスワード:testtest1
 
 ## 開発環境
 * Ruby<br>
@@ -13,11 +17,16 @@
 * PostgreSQL<br>
 * Github<br>
 * Heroku<br>
-* VSCode（Visual Studio Code）
+* VSCode（Visual Studio Code）<br><br>
+
+## 制作背景
+これまで10年以上建築業界で従事してきた経験から、建築の魅力を一般の人にも知ってもらいたいと思い開発しました。<br>
+海外旅行や地方の観光地に行くと、観光名所の有名建築物を見に行かれる方はとても多いと思います。<br>
+一見すると入り込みにくい文化ではありますが少し知るだけで、映画やファッションのように面白く、奥が深いものです。<br>
+まだまだ至らないところが多いアプリですが、多くの人の建築の興味を掻き立てることが出来たらなと思います。<br>
 
 
-
-# 📦アプリ機能
+# アプリの機能<br>
 
 ## 1.記事の投稿
 マークダウン記法で記事を投稿することができます。
@@ -45,16 +54,10 @@
 
 ## 7.投稿者の詳細表示
 記事詳細画面からクリックすると投稿者情報が表示されます。
-![投稿者画面](https://user-images.githubusercontent.com/67260509/94393304-9bc3fe00-0195-11eb-8de4-1f46680431cb.png)
+![投稿者画面](https://user-images.githubusercontent.com/67260509/94393304-9bc3fe00-0195-11eb-8de4-1f46680431cb.png)<br>
 
 ## トップ画面
-![説明](https://user-images.githubusercontent.com/67260509/94383678-b9846980-017b-11eb-930d-24986e8e8ee6.jpg)
-
-## 詳細画面
-
-
-# 🌐URL
-https://archilog.herokuapp.com/
+![説明](https://user-images.githubusercontent.com/67260509/94383678-b9846980-017b-11eb-930d-24986e8e8ee6.jpg)<br>
 
 
 # 👀 Author
