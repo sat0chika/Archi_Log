@@ -6,51 +6,6 @@
 
 ![16d0b0f189133673b6d674cb7ba1ff9c](https://user-images.githubusercontent.com/67260509/94368727-bdcf6900-0120-11eb-9dbf-b00b3c5e9901.gif)
 
-## peopleテーブル
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null: false|
-|email|string|null: false|
-|password|string|null: false|
-|icon|string||
-### Association
+![説明](https://user-images.githubusercontent.com/67260509/94383678-b9846980-017b-11eb-930d-24986e8e8ee6.jpg)
 
-## writersテーブル
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null: false|
-|email|string|null: false|
-|password|string|null: false|
-|icon|string||
-### Association
-- has_many :articles
-
-## articlesテーブル
-|Column|Type|Options|
-|------|----|-------|
-|title|string|null: false|
-|text|text||
-|image|string||
-|favorite|string||
-|writer_id|integer|null: false, foreign_key: true|
-### Association
-- belongs_to :writer
-- has_many :articles_tags
-- has_many :tags, through: :articles_tags
-
-## tagsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|text|text|null: false|
-### Association
-- has_many :articles_tags
-- has_many :articles, through: :articles_tags
-
-## articles_tagsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|article_id|integer|null: false, foreign_key: true|
-|tag_id|integer|null: false, foreign_key: true|
-### Association
-- belongs_to :article
-- belongs_to :tag
+![詳細ページ](https://user-images.githubusercontent.com/67260509/94383705-cacd7600-017b-11eb-9d53-67fe407a7924.jpg)
