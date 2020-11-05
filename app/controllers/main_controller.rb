@@ -7,13 +7,12 @@ class MainController < ApplicationController
     @icon = @person.icon
   end
 
-
-  # def edit
-  #   @group = Group.find(params[:id])
-  # end
-
   def edit
     # @person = Person.find(params[:id])
   end
+
+  def new_guest
+    user = User.find_or_create_by(email: 'guest@example.com')
+      user.password 
 
 end
