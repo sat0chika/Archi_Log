@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :people
   root to: 'main#index'
-  post 'topics/edit' => 'topics#edit'
+  # post 'topics/edit' => 'topics#edit'
   post '/main/guest_sign_in', to: 'main#new_guest'
 
   resources :topics do

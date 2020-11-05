@@ -12,7 +12,13 @@ class MainController < ApplicationController
   end
 
   def new_guest
-    user = User.find_or_create_by(email: 'guest@example.com')
-      user.password 
-
+    person = Person.find_or_create_by(email: 'guest@example.com') do |person|
+      binding.pry
+      person.password = SecureRandom.urlsafe_base64
+      person.save if !person.id
+      person.name = "ゲストユーザー"
+    end
+    sign_in person
+    redirect_to root_path, notice: 'ゲストユーザーとしてログインしました。'
+  end
 end

@@ -3,8 +3,7 @@
     %h2 Log in
     %h5 登録しているユーザーでログイン
     = render "devise/shared/links"
-    = link_to 'ゲストログイン（閲覧用）'
-    -# , homes_guest_sign_in_path, method: :post
+    = link_to 'かんたんログイン（閲覧用）', main_guest_sign_in_path, method: :post, class: 'Button UserButton'
   .AccountPage__form
     = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
       .FormField
