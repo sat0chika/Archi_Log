@@ -13,7 +13,6 @@ class MainController < ApplicationController
 
   def new_guest
     person = Person.find_or_create_by(email: 'guest@example.com') do |person|
-      binding.pry
       person.password = SecureRandom.urlsafe_base64
       person.save if !person.id
       person.name = "ゲストユーザー"
