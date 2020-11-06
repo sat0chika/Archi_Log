@@ -10,14 +10,4 @@ class MainController < ApplicationController
   def edit
     # @person = Person.find(params[:id])
   end
-
-  def new_guest
-    person = Person.find_or_create_by(email: 'guest@example.com') do |person|
-      person.password = SecureRandom.urlsafe_base64
-      person.save if !person.id
-      person.name = "ゲストユーザー"
-    end
-    sign_in person
-    redirect_to root_path, notice: 'ゲストユーザーとしてログインしました。'
-  end
 end

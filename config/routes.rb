@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :people
   root to: 'main#index'
-  # post 'topics/edit' => 'topics#edit'
-  post '/main/guest_sign_in', to: 'main#new_guest'
+  devise_for :people
+  devise_scope :person do
+    post '/guest', to: 'guest_sessions#create'
+  end
 
   resources :topics do
     resource :likes, only: [:create, :destroy]
