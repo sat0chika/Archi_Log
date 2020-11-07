@@ -65,3 +65,4 @@ gem 'mini_magick'
 gem "jquery-rails"
 gem 'slim-rails'
 gem 'fog-aws'
+gem 'rubocop', require: false
