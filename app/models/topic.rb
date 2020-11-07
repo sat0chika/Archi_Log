@@ -12,7 +12,7 @@ class Topic < ApplicationRecord
 
   def self.search(search)
     if search != ""
-      Topic.where('title LIKE(?) OR heading LIKE(?) OR description LIKE(?)' , "%#{search}%", "%#{search}%", "%#{search}%")
+      Topic.where('title LIKE(?) OR heading LIKE(?) OR description LIKE(?)', "%#{search}%", "%#{search}%", "%#{search}%")
     else
       Topic.all
     end
@@ -23,17 +23,17 @@ class Topic < ApplicationRecord
   end
 
   def save_tag(sent_tags)
-    current_tags = self.tags.pluck(:tag_name) unless self.tags.nil?
+    current_tags = tags.pluck(:tag_name) unless tags.nil?
     old_tags = current_tags - sent_tags
     new_tags = sent_tags - current_tags
 
-  #   old_tags.each do |old|
-  #     self.topic_tags.delete TopicTag.find_by(topic_tag_name: old)
-  #   end
+    #   old_tags.each do |old|
+    #     self.topic_tags.delete TopicTag.find_by(topic_tag_name: old)
+    #   end
 
-  #   new_tags.each do |new|
-  #     new_topic_tag = TopicTag.find_or_create_by(topic_tag_name: new)
-  #     self.topic_tags << new_topic_tag
-  #   end
+    #   new_tags.each do |new|
+    #     new_topic_tag = TopicTag.find_or_create_by(topic_tag_name: new)
+    #     self.topic_tags << new_topic_tag
+    #   end
   end
 end

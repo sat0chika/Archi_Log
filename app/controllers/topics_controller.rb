@@ -1,10 +1,10 @@
 class TopicsController < ApplicationController
-  before_action :set_topic, only: [:edit, :update, :destroy]
+  before_action :set_topic, only: %i[edit update destroy]
 
   def index
     @tag_list = Tag.all
-    @topics =  Topic.all
-    @topic = current_person.topics.new 
+    @topics = Topic.all
+    @topic = current_person.topics.new
   end
 
   def new
@@ -59,7 +59,6 @@ class TopicsController < ApplicationController
   end
 
   def show
-
     @topic = Topic.find_by(id: params[:id])
     @person = Person.find_by(id: @topic.person_id)
     @like_count = Like.where(topic_id: @topic.id).count
@@ -71,7 +70,7 @@ class TopicsController < ApplicationController
 
   def index_1
     @tag_list = Tag.all
-    @topics =  Topic.all
+    @topics = Topic.all
   end
 
   def list_1
@@ -122,5 +121,4 @@ class TopicsController < ApplicationController
   # def set_person
   #   @person = Person.find(params[:person_id])
   # end
-
 end

@@ -7,8 +7,7 @@ class Person < ApplicationRecord
   has_many :topics
   has_many :likes, dependent: :destroy
 
-
   def already_liked?(topic)
-    self.likes.exists?(topic_id: topic.id)
+    likes.exists?(topic_id: topic.id)
   end
 end

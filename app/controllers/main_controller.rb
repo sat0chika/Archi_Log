@@ -1,5 +1,4 @@
 class MainController < ApplicationController
-
   def index
     @topics = Topic.includes(:person).order("created_at DESC").limit(10)
     # Date.current.strftime('%Y/%m/%d')

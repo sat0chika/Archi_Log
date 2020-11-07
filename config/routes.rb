@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   end
 
   resources :topics do
-    resource :likes, only: [:create, :destroy]
+    resource :likes, only: %i[create destroy]
     collection do
       get 'list_1'
       get 'list_2'
@@ -20,7 +20,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :people, only: [:show, :edit, :update] do
+  resources :people, only: %i[show edit update] do
     collection do
       get 'fab'
     end
@@ -41,5 +41,4 @@ Rails.application.routes.draw do
   namespace :api do
     resources :messages, only: :index, defaults: { format: 'json' }
   end
-
 end

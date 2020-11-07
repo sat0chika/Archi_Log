@@ -1,5 +1,4 @@
 class PeopleController < ApplicationController
-
   def show
     @topic = Topic.find_by(id: params[:id])
     person = Person.find(params[:id])
@@ -40,5 +39,4 @@ class PeopleController < ApplicationController
   def person_params
     params.require(:person).permit(:name, :email, :introduction, :icon, :password, :password_confirmation, :introduce, :image)
   end
-
 end

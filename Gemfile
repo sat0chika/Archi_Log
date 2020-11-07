@@ -24,24 +24,24 @@ gem 'jbuilder', '~> 2.7'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
-gem 'redcarpet', '~> 2.3.0'
 gem 'coderay'
 gem 'jquery-rails'
+gem 'redcarpet', '~> 2.3.0'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'pry-rails'
   gem 'sqlite3'
 end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'web-console', '>= 3.3.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
@@ -56,13 +56,13 @@ group :test do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem "haml-rails", ">= 1.0", '<= 2.0.1'
-gem "font-awesome-sass"
-gem 'devise'
 gem 'carrierwave'
-gem 'mini_magick'
-gem "jquery-rails"
-gem 'slim-rails'
+gem 'devise'
 gem 'fog-aws'
+gem "font-awesome-sass"
+gem "haml-rails", ">= 1.0", '<= 2.0.1'
+gem "jquery-rails"
+gem 'mini_magick'
 gem 'rubocop', require: false
+gem 'slim-rails'
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
