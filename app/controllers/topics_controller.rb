@@ -14,8 +14,8 @@ class TopicsController < ApplicationController
   end
 
   def create
-    @person = Person.find(current_person.id)
-    @icon = @person.icon
+    # @person = Person.find(current_person.id)
+    # @icon = @person.icon
     @topic = Topic.new(topic_params)
     # tag_list = params[:topic][:tag_name].split(nil)
     if @topic.save
