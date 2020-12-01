@@ -1,6 +1,12 @@
 %header
 = render('main/header')
 .NewTopic
+  - if @topic.errors.any?
+    .alert
+      %h2= "#{@topic.errors.full_messages.count}件のエラーが発生しました。"
+      %ul
+        - @topic.errors.full_messages.each do |message|
+          %li= message
   .NewTopic__page
     新規投稿
   .NewTopic__form
