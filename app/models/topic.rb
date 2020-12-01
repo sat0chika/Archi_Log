@@ -1,8 +1,8 @@
 class Topic < ApplicationRecord
-  validates :title, presence: true, length: { maximum: 30 }
-  validates :description, presence: true
-  validates :heading, presence: true, length: { maximum: 140 }
   validates :image, presence: true
+  validates :title, presence: true, length: { maximum: 30 }
+  validates :heading, presence: true, length: { maximum: 140 }
+  validates :description, presence: true
   mount_uploader :image, ImageUploader
 
   belongs_to :person, optional: true
