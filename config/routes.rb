@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root to: 'main#index'
   devise_for :people
   devise_scope :person do
-    post '/guest', to: 'guest_sessions#create'
+    post '/guest', to: 'guest_sessions#new_guest'
   end
 
   resources :topics do
